@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="ProjectWorkLibrary.ManchesterLibrary" Collapsed="true">
+    <Position X="2.75" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>/9/Ta2eSGPqTXn7oHHnhqsd3jo8gefI21Kfyl/JOvf0=</HashCode>
+      <FileName>ManchesterLibrary.cs</FileName>
+      <NewMemberFileName>Book.cs</NewMemberFileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjectWorkLibrary.Book" Collapsed="true">
+    <Position X="4.75" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAQAgEEAAQAQACAAAgABAEAAAAAAAAAQAAAA=</HashCode>
+      <FileName>Book.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjectWorkLibrary.Borrow" Collapsed="true">
+    <Position X="6.5" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAQAgAAAAAAQAAAAAAAAAAAAABAAAAAAAA=</HashCode>
+      <FileName>Borrow.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjectWorkLibrary.User" Collapsed="true">
+    <Position X="8.25" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIIACAAAAAIGAAgAAQABAAAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>User.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

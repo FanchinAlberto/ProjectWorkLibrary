@@ -30,7 +30,16 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ManchesterLibrary));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnGoToHistory = new FontAwesome.Sharp.IconButton();
+            this.btnGoToDashboard = new FontAwesome.Sharp.IconButton();
+            this.btnGoToLoans = new FontAwesome.Sharp.IconButton();
+            this.btnGoToUsersManagement = new FontAwesome.Sharp.IconButton();
+            this.btnGoToBookManagement = new FontAwesome.Sharp.IconButton();
+            this.btnGoToUsers = new FontAwesome.Sharp.IconButton();
+            this.btnGoToBooks = new FontAwesome.Sharp.IconButton();
+            this.ptbShowLogo = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label90 = new System.Windows.Forms.Label();
             this.PrimaryTabControl = new System.Windows.Forms.TabControl();
             this.tabPageLogin = new System.Windows.Forms.TabPage();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -59,6 +68,7 @@
             this.tbxNameFilter = new System.Windows.Forms.TextBox();
             this.viewUsers = new System.Windows.Forms.DataGridView();
             this.tabViewBooks = new System.Windows.Forms.TabPage();
+            this.ptbShowThumbnail = new System.Windows.Forms.PictureBox();
             this.label63 = new System.Windows.Forms.Label();
             this.label64 = new System.Windows.Forms.Label();
             this.tbxDescriptionFilter = new System.Windows.Forms.TextBox();
@@ -81,8 +91,11 @@
             this.tbxSubtitlesFilter = new System.Windows.Forms.TextBox();
             this.tbxISBNFilter = new System.Windows.Forms.TextBox();
             this.viewBooks = new System.Windows.Forms.DataGridView();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabManageUsers = new System.Windows.Forms.TabPage();
+            this.btnGoToEditUser = new FontAwesome.Sharp.IconButton();
+            this.btnGoToRemoveUser = new FontAwesome.Sharp.IconButton();
+            this.btnGoToAddUser = new FontAwesome.Sharp.IconButton();
+            this.UserManagementTabControl = new System.Windows.Forms.TabControl();
             this.tabAddUser = new System.Windows.Forms.TabPage();
             this.btnAddUser = new System.Windows.Forms.Button();
             this.label26 = new System.Windows.Forms.Label();
@@ -130,8 +143,11 @@
             this.tbxModifyUserSearch = new System.Windows.Forms.TextBox();
             this.label29 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tabControl2 = new System.Windows.Forms.TabControl();
+            this.tabManageBooks = new System.Windows.Forms.TabPage();
+            this.btnGoToEditBook = new FontAwesome.Sharp.IconButton();
+            this.btnGoToRemoveBook = new FontAwesome.Sharp.IconButton();
+            this.btnGoToAddBook = new FontAwesome.Sharp.IconButton();
+            this.BookManagementTabControl = new System.Windows.Forms.TabControl();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.label65 = new System.Windows.Forms.Label();
             this.label66 = new System.Windows.Forms.Label();
@@ -195,8 +211,8 @@
             this.tbxSearchBook = new System.Windows.Forms.TextBox();
             this.label59 = new System.Windows.Forms.Label();
             this.label60 = new System.Windows.Forms.Label();
-            this.tabPage6 = new System.Windows.Forms.TabPage();
-            this.tabControl3 = new System.Windows.Forms.TabControl();
+            this.tabLoans = new System.Windows.Forms.TabPage();
+            this.ManageLoansTabControl = new System.Windows.Forms.TabControl();
             this.tabPage7 = new System.Windows.Forms.TabPage();
             this.label85 = new System.Windows.Forms.Label();
             this.tbxLoanID = new System.Windows.Forms.TextBox();
@@ -211,6 +227,8 @@
             this.tbxAddLoanBookISBN = new System.Windows.Forms.TextBox();
             this.tbxAddLoanUserCF = new System.Windows.Forms.TextBox();
             this.tabPage8 = new System.Windows.Forms.TabPage();
+            this.label87 = new System.Windows.Forms.Label();
+            this.tbxFilterLoanID = new System.Windows.Forms.TextBox();
             this.label83 = new System.Windows.Forms.Label();
             this.label82 = new System.Windows.Forms.Label();
             this.btnFilterLoans = new System.Windows.Forms.Button();
@@ -223,62 +241,231 @@
             this.label79 = new System.Windows.Forms.Label();
             this.viewLoans = new System.Windows.Forms.DataGridView();
             this.tabPage9 = new System.Windows.Forms.TabPage();
+            this.label89 = new System.Windows.Forms.Label();
+            this.nudRating = new System.Windows.Forms.NumericUpDown();
+            this.label88 = new System.Windows.Forms.Label();
+            this.tbxRemoveLoanBookISBN = new System.Windows.Forms.TextBox();
             this.btnRemoveLoan = new System.Windows.Forms.Button();
             this.label86 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tbxRemoveLoanID = new System.Windows.Forms.TextBox();
             this.label84 = new System.Windows.Forms.Label();
             this.label73 = new System.Windows.Forms.Label();
-            this.label87 = new System.Windows.Forms.Label();
-            this.tbxFilterLoanID = new System.Windows.Forms.TextBox();
+            this.tabDashBoard = new System.Windows.Forms.TabPage();
+            this.label92 = new System.Windows.Forms.Label();
+            this.label91 = new System.Windows.Forms.Label();
+            this.cmbChoseFilterDashboard = new System.Windows.Forms.ComboBox();
+            this.btnGetFileDownload = new System.Windows.Forms.Button();
+            this.btnFilterDashboard = new System.Windows.Forms.Button();
+            this.viewDashboard = new System.Windows.Forms.DataGridView();
+            this.tabHistory = new System.Windows.Forms.TabPage();
+            this.label94 = new System.Windows.Forms.Label();
+            this.label93 = new System.Windows.Forms.Label();
+            this.viewHistory = new System.Windows.Forms.DataGridView();
+            this.btnGoToViewLoan = new FontAwesome.Sharp.IconButton();
+            this.btnGoToRemoveLoan = new FontAwesome.Sharp.IconButton();
+            this.btnGoToAddLoan = new FontAwesome.Sharp.IconButton();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbShowLogo)).BeginInit();
+            this.panel2.SuspendLayout();
             this.PrimaryTabControl.SuspendLayout();
             this.tabPageLogin.SuspendLayout();
             this.panel3.SuspendLayout();
             this.tabPageUserView.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.viewUsers)).BeginInit();
             this.tabViewBooks.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbShowThumbnail)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.viewBooks)).BeginInit();
-            this.tabPage1.SuspendLayout();
-            this.tabControl1.SuspendLayout();
+            this.tabManageUsers.SuspendLayout();
+            this.UserManagementTabControl.SuspendLayout();
             this.tabAddUser.SuspendLayout();
             this.tabRemoveUser.SuspendLayout();
             this.tabModifyUser.SuspendLayout();
-            this.tabPage2.SuspendLayout();
-            this.tabControl2.SuspendLayout();
+            this.tabManageBooks.SuspendLayout();
+            this.BookManagementTabControl.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.tabPage4.SuspendLayout();
             this.tabPage5.SuspendLayout();
-            this.tabPage6.SuspendLayout();
-            this.tabControl3.SuspendLayout();
+            this.tabLoans.SuspendLayout();
+            this.ManageLoansTabControl.SuspendLayout();
             this.tabPage7.SuspendLayout();
             this.tabPage8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.viewLoans)).BeginInit();
             this.tabPage9.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudRating)).BeginInit();
+            this.tabDashBoard.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.viewDashboard)).BeginInit();
+            this.tabHistory.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.viewHistory)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(51)))), ((int)(((byte)(68)))));
-            this.panel1.Location = new System.Drawing.Point(0, 36);
+            this.panel1.Controls.Add(this.btnGoToHistory);
+            this.panel1.Controls.Add(this.btnGoToDashboard);
+            this.panel1.Controls.Add(this.btnGoToLoans);
+            this.panel1.Controls.Add(this.btnGoToUsersManagement);
+            this.panel1.Controls.Add(this.btnGoToBookManagement);
+            this.panel1.Controls.Add(this.btnGoToUsers);
+            this.panel1.Controls.Add(this.btnGoToBooks);
+            this.panel1.Controls.Add(this.ptbShowLogo);
+            this.panel1.Location = new System.Drawing.Point(0, -2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 609);
+            this.panel1.Size = new System.Drawing.Size(200, 647);
             this.panel1.TabIndex = 0;
+            // 
+            // btnGoToHistory
+            // 
+            this.btnGoToHistory.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnGoToHistory.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(182)))), ((int)(((byte)(162)))));
+            this.btnGoToHistory.IconChar = FontAwesome.Sharp.IconChar.History;
+            this.btnGoToHistory.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(182)))), ((int)(((byte)(162)))));
+            this.btnGoToHistory.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnGoToHistory.IconSize = 32;
+            this.btnGoToHistory.Location = new System.Drawing.Point(0, 558);
+            this.btnGoToHistory.Name = "btnGoToHistory";
+            this.btnGoToHistory.Size = new System.Drawing.Size(200, 52);
+            this.btnGoToHistory.TabIndex = 7;
+            this.btnGoToHistory.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnGoToHistory.UseVisualStyleBackColor = true;
+            this.btnGoToHistory.Click += new System.EventHandler(this.btnGoToHistory_Click);
+            // 
+            // btnGoToDashboard
+            // 
+            this.btnGoToDashboard.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnGoToDashboard.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(182)))), ((int)(((byte)(162)))));
+            this.btnGoToDashboard.IconChar = FontAwesome.Sharp.IconChar.Dashcube;
+            this.btnGoToDashboard.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(182)))), ((int)(((byte)(162)))));
+            this.btnGoToDashboard.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnGoToDashboard.IconSize = 32;
+            this.btnGoToDashboard.Location = new System.Drawing.Point(0, 499);
+            this.btnGoToDashboard.Name = "btnGoToDashboard";
+            this.btnGoToDashboard.Size = new System.Drawing.Size(200, 52);
+            this.btnGoToDashboard.TabIndex = 6;
+            this.btnGoToDashboard.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnGoToDashboard.UseVisualStyleBackColor = true;
+            this.btnGoToDashboard.Click += new System.EventHandler(this.btnGoToDashboard_Click);
+            // 
+            // btnGoToLoans
+            // 
+            this.btnGoToLoans.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnGoToLoans.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(182)))), ((int)(((byte)(162)))));
+            this.btnGoToLoans.IconChar = FontAwesome.Sharp.IconChar.Bookmark;
+            this.btnGoToLoans.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(182)))), ((int)(((byte)(162)))));
+            this.btnGoToLoans.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnGoToLoans.IconSize = 32;
+            this.btnGoToLoans.Location = new System.Drawing.Point(-3, 441);
+            this.btnGoToLoans.Name = "btnGoToLoans";
+            this.btnGoToLoans.Size = new System.Drawing.Size(200, 52);
+            this.btnGoToLoans.TabIndex = 5;
+            this.btnGoToLoans.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnGoToLoans.UseVisualStyleBackColor = true;
+            this.btnGoToLoans.Click += new System.EventHandler(this.btnGoToLoans_Click);
+            // 
+            // btnGoToUsersManagement
+            // 
+            this.btnGoToUsersManagement.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnGoToUsersManagement.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(182)))), ((int)(((byte)(162)))));
+            this.btnGoToUsersManagement.IconChar = FontAwesome.Sharp.IconChar.UserCheck;
+            this.btnGoToUsersManagement.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(182)))), ((int)(((byte)(162)))));
+            this.btnGoToUsersManagement.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnGoToUsersManagement.IconSize = 32;
+            this.btnGoToUsersManagement.Location = new System.Drawing.Point(0, 326);
+            this.btnGoToUsersManagement.Name = "btnGoToUsersManagement";
+            this.btnGoToUsersManagement.Size = new System.Drawing.Size(200, 52);
+            this.btnGoToUsersManagement.TabIndex = 4;
+            this.btnGoToUsersManagement.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnGoToUsersManagement.UseVisualStyleBackColor = true;
+            this.btnGoToUsersManagement.Click += new System.EventHandler(this.btnGoToUsersManagement_Click);
+            // 
+            // btnGoToBookManagement
+            // 
+            this.btnGoToBookManagement.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnGoToBookManagement.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(182)))), ((int)(((byte)(162)))));
+            this.btnGoToBookManagement.IconChar = FontAwesome.Sharp.IconChar.BookReader;
+            this.btnGoToBookManagement.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(182)))), ((int)(((byte)(162)))));
+            this.btnGoToBookManagement.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnGoToBookManagement.IconSize = 32;
+            this.btnGoToBookManagement.Location = new System.Drawing.Point(0, 383);
+            this.btnGoToBookManagement.Name = "btnGoToBookManagement";
+            this.btnGoToBookManagement.Size = new System.Drawing.Size(200, 52);
+            this.btnGoToBookManagement.TabIndex = 3;
+            this.btnGoToBookManagement.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnGoToBookManagement.UseVisualStyleBackColor = true;
+            this.btnGoToBookManagement.Click += new System.EventHandler(this.btnGoToBookManagement_Click);
+            // 
+            // btnGoToUsers
+            // 
+            this.btnGoToUsers.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnGoToUsers.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(182)))), ((int)(((byte)(162)))));
+            this.btnGoToUsers.IconChar = FontAwesome.Sharp.IconChar.User;
+            this.btnGoToUsers.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(182)))), ((int)(((byte)(162)))));
+            this.btnGoToUsers.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnGoToUsers.IconSize = 32;
+            this.btnGoToUsers.Location = new System.Drawing.Point(0, 268);
+            this.btnGoToUsers.Name = "btnGoToUsers";
+            this.btnGoToUsers.Size = new System.Drawing.Size(200, 52);
+            this.btnGoToUsers.TabIndex = 2;
+            this.btnGoToUsers.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnGoToUsers.UseVisualStyleBackColor = true;
+            this.btnGoToUsers.Click += new System.EventHandler(this.btnGoToUsers_Click);
+            // 
+            // btnGoToBooks
+            // 
+            this.btnGoToBooks.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnGoToBooks.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(182)))), ((int)(((byte)(162)))));
+            this.btnGoToBooks.IconChar = FontAwesome.Sharp.IconChar.Book;
+            this.btnGoToBooks.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(182)))), ((int)(((byte)(162)))));
+            this.btnGoToBooks.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnGoToBooks.IconSize = 32;
+            this.btnGoToBooks.Location = new System.Drawing.Point(0, 210);
+            this.btnGoToBooks.Name = "btnGoToBooks";
+            this.btnGoToBooks.Size = new System.Drawing.Size(200, 52);
+            this.btnGoToBooks.TabIndex = 1;
+            this.btnGoToBooks.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnGoToBooks.UseVisualStyleBackColor = true;
+            this.btnGoToBooks.Click += new System.EventHandler(this.btnGoToBooks_Click);
+            // 
+            // ptbShowLogo
+            // 
+            this.ptbShowLogo.Image = global::ProjectWorkLibrary.Properties.Resources.LogoLibrary1;
+            this.ptbShowLogo.Location = new System.Drawing.Point(3, 4);
+            this.ptbShowLogo.Name = "ptbShowLogo";
+            this.ptbShowLogo.Size = new System.Drawing.Size(193, 176);
+            this.ptbShowLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ptbShowLogo.TabIndex = 0;
+            this.ptbShowLogo.TabStop = false;
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(134)))), ((int)(((byte)(178)))));
-            this.panel2.Location = new System.Drawing.Point(0, -2);
+            this.panel2.Controls.Add(this.label90);
+            this.panel2.Location = new System.Drawing.Point(198, -2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(931, 39);
+            this.panel2.Size = new System.Drawing.Size(733, 39);
             this.panel2.TabIndex = 1;
+            // 
+            // label90
+            // 
+            this.label90.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label90.ForeColor = System.Drawing.Color.White;
+            this.label90.Location = new System.Drawing.Point(0, 0);
+            this.label90.Name = "label90";
+            this.label90.Size = new System.Drawing.Size(733, 39);
+            this.label90.TabIndex = 0;
+            this.label90.Text = "MANCHESTER CITY LIBRARY";
+            this.label90.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // PrimaryTabControl
             // 
             this.PrimaryTabControl.Controls.Add(this.tabPageLogin);
             this.PrimaryTabControl.Controls.Add(this.tabPageUserView);
             this.PrimaryTabControl.Controls.Add(this.tabViewBooks);
-            this.PrimaryTabControl.Controls.Add(this.tabPage1);
-            this.PrimaryTabControl.Controls.Add(this.tabPage2);
-            this.PrimaryTabControl.Controls.Add(this.tabPage6);
+            this.PrimaryTabControl.Controls.Add(this.tabManageUsers);
+            this.PrimaryTabControl.Controls.Add(this.tabManageBooks);
+            this.PrimaryTabControl.Controls.Add(this.tabLoans);
+            this.PrimaryTabControl.Controls.Add(this.tabDashBoard);
+            this.PrimaryTabControl.Controls.Add(this.tabHistory);
             this.PrimaryTabControl.Location = new System.Drawing.Point(198, 36);
             this.PrimaryTabControl.Name = "PrimaryTabControl";
             this.PrimaryTabControl.SelectedIndex = 0;
@@ -294,7 +481,7 @@
             this.tabPageLogin.Padding = new System.Windows.Forms.Padding(3);
             this.tabPageLogin.Size = new System.Drawing.Size(725, 580);
             this.tabPageLogin.TabIndex = 0;
-            this.tabPageLogin.Text = "tabPage1";
+            this.tabPageLogin.Text = "LOGIN";
             // 
             // panel3
             // 
@@ -394,14 +581,14 @@
             this.tabPageUserView.Padding = new System.Windows.Forms.Padding(3);
             this.tabPageUserView.Size = new System.Drawing.Size(725, 580);
             this.tabPageUserView.TabIndex = 1;
-            this.tabPageUserView.Text = "tabPage2";
+            this.tabPageUserView.Text = "USERS";
             // 
             // btnFilterUsers
             // 
             this.btnFilterUsers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(51)))), ((int)(((byte)(68)))));
             this.btnFilterUsers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFilterUsers.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(182)))), ((int)(((byte)(162)))));
-            this.btnFilterUsers.Location = new System.Drawing.Point(514, 25);
+            this.btnFilterUsers.Location = new System.Drawing.Point(523, 28);
             this.btnFilterUsers.Name = "btnFilterUsers";
             this.btnFilterUsers.Size = new System.Drawing.Size(100, 46);
             this.btnFilterUsers.TabIndex = 19;
@@ -413,7 +600,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(51)))), ((int)(((byte)(68)))));
-            this.label10.Location = new System.Drawing.Point(88, 42);
+            this.label10.Location = new System.Drawing.Point(97, 45);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(27, 13);
             this.label10.TabIndex = 17;
@@ -423,7 +610,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(51)))), ((int)(((byte)(68)))));
-            this.label9.Location = new System.Drawing.Point(192, 42);
+            this.label9.Location = new System.Drawing.Point(201, 45);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(23, 13);
             this.label9.TabIndex = 16;
@@ -433,7 +620,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(51)))), ((int)(((byte)(68)))));
-            this.label8.Location = new System.Drawing.Point(299, 42);
+            this.label8.Location = new System.Drawing.Point(308, 45);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(56, 13);
             this.label8.TabIndex = 15;
@@ -443,7 +630,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(51)))), ((int)(((byte)(68)))));
-            this.label7.Location = new System.Drawing.Point(405, 42);
+            this.label7.Location = new System.Drawing.Point(414, 45);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(54, 13);
             this.label7.TabIndex = 14;
@@ -453,7 +640,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(51)))), ((int)(((byte)(68)))));
-            this.label6.Location = new System.Drawing.Point(405, 7);
+            this.label6.Location = new System.Drawing.Point(414, 10);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(32, 13);
             this.label6.TabIndex = 13;
@@ -463,7 +650,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(51)))), ((int)(((byte)(68)))));
-            this.label5.Location = new System.Drawing.Point(299, 7);
+            this.label5.Location = new System.Drawing.Point(308, 10);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(35, 13);
             this.label5.TabIndex = 12;
@@ -473,7 +660,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(51)))), ((int)(((byte)(68)))));
-            this.label4.Location = new System.Drawing.Point(192, 7);
+            this.label4.Location = new System.Drawing.Point(201, 10);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(52, 13);
             this.label4.TabIndex = 11;
@@ -483,7 +670,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(51)))), ((int)(((byte)(68)))));
-            this.label1.Location = new System.Drawing.Point(88, 7);
+            this.label1.Location = new System.Drawing.Point(97, 10);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(38, 13);
             this.label1.TabIndex = 10;
@@ -494,7 +681,7 @@
             this.tbxRoleFilter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(51)))), ((int)(((byte)(68)))));
             this.tbxRoleFilter.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbxRoleFilter.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(182)))), ((int)(((byte)(162)))));
-            this.tbxRoleFilter.Location = new System.Drawing.Point(408, 25);
+            this.tbxRoleFilter.Location = new System.Drawing.Point(417, 28);
             this.tbxRoleFilter.Name = "tbxRoleFilter";
             this.tbxRoleFilter.Size = new System.Drawing.Size(100, 13);
             this.tbxRoleFilter.TabIndex = 4;
@@ -504,7 +691,7 @@
             this.tbxSurnameFilter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(51)))), ((int)(((byte)(68)))));
             this.tbxSurnameFilter.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbxSurnameFilter.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(182)))), ((int)(((byte)(162)))));
-            this.tbxSurnameFilter.Location = new System.Drawing.Point(195, 25);
+            this.tbxSurnameFilter.Location = new System.Drawing.Point(204, 28);
             this.tbxSurnameFilter.Name = "tbxSurnameFilter";
             this.tbxSurnameFilter.Size = new System.Drawing.Size(100, 13);
             this.tbxSurnameFilter.TabIndex = 2;
@@ -514,7 +701,7 @@
             this.tbxEmailFilter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(51)))), ((int)(((byte)(68)))));
             this.tbxEmailFilter.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbxEmailFilter.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(182)))), ((int)(((byte)(162)))));
-            this.tbxEmailFilter.Location = new System.Drawing.Point(302, 24);
+            this.tbxEmailFilter.Location = new System.Drawing.Point(311, 27);
             this.tbxEmailFilter.Name = "tbxEmailFilter";
             this.tbxEmailFilter.Size = new System.Drawing.Size(100, 13);
             this.tbxEmailFilter.TabIndex = 3;
@@ -524,7 +711,7 @@
             this.tbxBirthDateFilter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(51)))), ((int)(((byte)(68)))));
             this.tbxBirthDateFilter.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbxBirthDateFilter.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(182)))), ((int)(((byte)(162)))));
-            this.tbxBirthDateFilter.Location = new System.Drawing.Point(408, 58);
+            this.tbxBirthDateFilter.Location = new System.Drawing.Point(417, 61);
             this.tbxBirthDateFilter.Name = "tbxBirthDateFilter";
             this.tbxBirthDateFilter.Size = new System.Drawing.Size(100, 13);
             this.tbxBirthDateFilter.TabIndex = 8;
@@ -534,7 +721,7 @@
             this.tbxPwFilter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(51)))), ((int)(((byte)(68)))));
             this.tbxPwFilter.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbxPwFilter.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(182)))), ((int)(((byte)(162)))));
-            this.tbxPwFilter.Location = new System.Drawing.Point(301, 57);
+            this.tbxPwFilter.Location = new System.Drawing.Point(310, 60);
             this.tbxPwFilter.Name = "tbxPwFilter";
             this.tbxPwFilter.Size = new System.Drawing.Size(100, 13);
             this.tbxPwFilter.TabIndex = 7;
@@ -544,7 +731,7 @@
             this.tbxCFFilter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(51)))), ((int)(((byte)(68)))));
             this.tbxCFFilter.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbxCFFilter.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(182)))), ((int)(((byte)(162)))));
-            this.tbxCFFilter.Location = new System.Drawing.Point(195, 58);
+            this.tbxCFFilter.Location = new System.Drawing.Point(204, 61);
             this.tbxCFFilter.Name = "tbxCFFilter";
             this.tbxCFFilter.Size = new System.Drawing.Size(100, 13);
             this.tbxCFFilter.TabIndex = 6;
@@ -554,7 +741,7 @@
             this.tbxCityFilter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(51)))), ((int)(((byte)(68)))));
             this.tbxCityFilter.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbxCityFilter.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(182)))), ((int)(((byte)(162)))));
-            this.tbxCityFilter.Location = new System.Drawing.Point(88, 58);
+            this.tbxCityFilter.Location = new System.Drawing.Point(97, 61);
             this.tbxCityFilter.Name = "tbxCityFilter";
             this.tbxCityFilter.Size = new System.Drawing.Size(100, 13);
             this.tbxCityFilter.TabIndex = 5;
@@ -564,7 +751,7 @@
             this.tbxNameFilter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(51)))), ((int)(((byte)(68)))));
             this.tbxNameFilter.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbxNameFilter.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(182)))), ((int)(((byte)(162)))));
-            this.tbxNameFilter.Location = new System.Drawing.Point(88, 25);
+            this.tbxNameFilter.Location = new System.Drawing.Point(97, 28);
             this.tbxNameFilter.Name = "tbxNameFilter";
             this.tbxNameFilter.Size = new System.Drawing.Size(100, 13);
             this.tbxNameFilter.TabIndex = 1;
@@ -583,6 +770,7 @@
             // tabViewBooks
             // 
             this.tabViewBooks.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(182)))), ((int)(((byte)(162)))));
+            this.tabViewBooks.Controls.Add(this.ptbShowThumbnail);
             this.tabViewBooks.Controls.Add(this.label63);
             this.tabViewBooks.Controls.Add(this.label64);
             this.tabViewBooks.Controls.Add(this.tbxDescriptionFilter);
@@ -610,13 +798,22 @@
             this.tabViewBooks.Padding = new System.Windows.Forms.Padding(3);
             this.tabViewBooks.Size = new System.Drawing.Size(725, 580);
             this.tabViewBooks.TabIndex = 2;
-            this.tabViewBooks.Text = "tabPage3";
+            this.tabViewBooks.Text = "BOOKS";
+            // 
+            // ptbShowThumbnail
+            // 
+            this.ptbShowThumbnail.Location = new System.Drawing.Point(6, 6);
+            this.ptbShowThumbnail.Name = "ptbShowThumbnail";
+            this.ptbShowThumbnail.Size = new System.Drawing.Size(109, 112);
+            this.ptbShowThumbnail.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ptbShowThumbnail.TabIndex = 0;
+            this.ptbShowThumbnail.TabStop = false;
             // 
             // label63
             // 
             this.label63.AutoSize = true;
             this.label63.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(51)))), ((int)(((byte)(68)))));
-            this.label63.Location = new System.Drawing.Point(485, 44);
+            this.label63.Location = new System.Drawing.Point(530, 61);
             this.label63.Name = "label63";
             this.label63.Size = new System.Drawing.Size(63, 13);
             this.label63.TabIndex = 34;
@@ -626,7 +823,7 @@
             // 
             this.label64.AutoSize = true;
             this.label64.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(51)))), ((int)(((byte)(68)))));
-            this.label64.Location = new System.Drawing.Point(485, 12);
+            this.label64.Location = new System.Drawing.Point(530, 29);
             this.label64.Name = "label64";
             this.label64.Size = new System.Drawing.Size(49, 13);
             this.label64.TabIndex = 33;
@@ -637,9 +834,9 @@
             this.tbxDescriptionFilter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(51)))), ((int)(((byte)(68)))));
             this.tbxDescriptionFilter.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbxDescriptionFilter.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(182)))), ((int)(((byte)(162)))));
-            this.tbxDescriptionFilter.Location = new System.Drawing.Point(488, 61);
+            this.tbxDescriptionFilter.Location = new System.Drawing.Point(533, 78);
             this.tbxDescriptionFilter.Name = "tbxDescriptionFilter";
-            this.tbxDescriptionFilter.Size = new System.Drawing.Size(100, 13);
+            this.tbxDescriptionFilter.Size = new System.Drawing.Size(79, 13);
             this.tbxDescriptionFilter.TabIndex = 32;
             // 
             // tbxQtaFilter
@@ -647,16 +844,16 @@
             this.tbxQtaFilter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(51)))), ((int)(((byte)(68)))));
             this.tbxQtaFilter.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbxQtaFilter.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(182)))), ((int)(((byte)(162)))));
-            this.tbxQtaFilter.Location = new System.Drawing.Point(488, 28);
+            this.tbxQtaFilter.Location = new System.Drawing.Point(533, 45);
             this.tbxQtaFilter.Name = "tbxQtaFilter";
-            this.tbxQtaFilter.Size = new System.Drawing.Size(100, 13);
+            this.tbxQtaFilter.Size = new System.Drawing.Size(79, 13);
             this.tbxQtaFilter.TabIndex = 31;
             // 
             // label61
             // 
             this.label61.AutoSize = true;
             this.label61.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(51)))), ((int)(((byte)(68)))));
-            this.label61.Location = new System.Drawing.Point(379, 44);
+            this.label61.Location = new System.Drawing.Point(429, 61);
             this.label61.Name = "label61";
             this.label61.Size = new System.Drawing.Size(40, 13);
             this.label61.TabIndex = 30;
@@ -666,7 +863,7 @@
             // 
             this.label62.AutoSize = true;
             this.label62.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(51)))), ((int)(((byte)(68)))));
-            this.label62.Location = new System.Drawing.Point(379, 12);
+            this.label62.Location = new System.Drawing.Point(429, 29);
             this.label62.Name = "label62";
             this.label62.Size = new System.Drawing.Size(84, 13);
             this.label62.TabIndex = 29;
@@ -677,9 +874,9 @@
             this.tbxPageFilter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(51)))), ((int)(((byte)(68)))));
             this.tbxPageFilter.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbxPageFilter.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(182)))), ((int)(((byte)(162)))));
-            this.tbxPageFilter.Location = new System.Drawing.Point(382, 61);
+            this.tbxPageFilter.Location = new System.Drawing.Point(432, 78);
             this.tbxPageFilter.Name = "tbxPageFilter";
-            this.tbxPageFilter.Size = new System.Drawing.Size(100, 13);
+            this.tbxPageFilter.Size = new System.Drawing.Size(81, 13);
             this.tbxPageFilter.TabIndex = 28;
             // 
             // tbxRatingFilter
@@ -687,16 +884,16 @@
             this.tbxRatingFilter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(51)))), ((int)(((byte)(68)))));
             this.tbxRatingFilter.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbxRatingFilter.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(182)))), ((int)(((byte)(162)))));
-            this.tbxRatingFilter.Location = new System.Drawing.Point(382, 28);
+            this.tbxRatingFilter.Location = new System.Drawing.Point(432, 45);
             this.tbxRatingFilter.Name = "tbxRatingFilter";
-            this.tbxRatingFilter.Size = new System.Drawing.Size(100, 13);
+            this.tbxRatingFilter.Size = new System.Drawing.Size(79, 13);
             this.tbxRatingFilter.TabIndex = 27;
             // 
             // label15
             // 
             this.label15.AutoSize = true;
             this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(51)))), ((int)(((byte)(68)))));
-            this.label15.Location = new System.Drawing.Point(35, 44);
+            this.label15.Location = new System.Drawing.Point(119, 61);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(50, 13);
             this.label15.TabIndex = 26;
@@ -706,7 +903,7 @@
             // 
             this.label16.AutoSize = true;
             this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(51)))), ((int)(((byte)(68)))));
-            this.label16.Location = new System.Drawing.Point(154, 45);
+            this.label16.Location = new System.Drawing.Point(217, 62);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(60, 13);
             this.label16.TabIndex = 25;
@@ -716,7 +913,7 @@
             // 
             this.label17.AutoSize = true;
             this.label17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(51)))), ((int)(((byte)(68)))));
-            this.label17.Location = new System.Drawing.Point(270, 44);
+            this.label17.Location = new System.Drawing.Point(323, 61);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(95, 13);
             this.label17.TabIndex = 24;
@@ -726,7 +923,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(51)))), ((int)(((byte)(68)))));
-            this.label12.Location = new System.Drawing.Point(270, 12);
+            this.label12.Location = new System.Drawing.Point(323, 29);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(46, 13);
             this.label12.TabIndex = 21;
@@ -736,7 +933,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(51)))), ((int)(((byte)(68)))));
-            this.label13.Location = new System.Drawing.Point(154, 12);
+            this.label13.Location = new System.Drawing.Point(217, 29);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(30, 13);
             this.label13.TabIndex = 20;
@@ -746,7 +943,7 @@
             // 
             this.label14.AutoSize = true;
             this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(51)))), ((int)(((byte)(68)))));
-            this.label14.Location = new System.Drawing.Point(35, 12);
+            this.label14.Location = new System.Drawing.Point(119, 29);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(35, 13);
             this.label14.TabIndex = 19;
@@ -757,9 +954,9 @@
             this.tbxTitleFilter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(51)))), ((int)(((byte)(68)))));
             this.tbxTitleFilter.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbxTitleFilter.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(182)))), ((int)(((byte)(162)))));
-            this.tbxTitleFilter.Location = new System.Drawing.Point(157, 28);
+            this.tbxTitleFilter.Location = new System.Drawing.Point(220, 45);
             this.tbxTitleFilter.Name = "tbxTitleFilter";
-            this.tbxTitleFilter.Size = new System.Drawing.Size(100, 13);
+            this.tbxTitleFilter.Size = new System.Drawing.Size(79, 13);
             this.tbxTitleFilter.TabIndex = 11;
             // 
             // btnBookFilter
@@ -767,9 +964,9 @@
             this.btnBookFilter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(51)))), ((int)(((byte)(68)))));
             this.btnBookFilter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBookFilter.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(182)))), ((int)(((byte)(162)))));
-            this.btnBookFilter.Location = new System.Drawing.Point(605, 28);
+            this.btnBookFilter.Location = new System.Drawing.Point(636, 45);
             this.btnBookFilter.Name = "btnBookFilter";
-            this.btnBookFilter.Size = new System.Drawing.Size(100, 46);
+            this.btnBookFilter.Size = new System.Drawing.Size(81, 46);
             this.btnBookFilter.TabIndex = 18;
             this.btnBookFilter.Text = "FILTER";
             this.btnBookFilter.UseVisualStyleBackColor = false;
@@ -780,9 +977,9 @@
             this.tbxAuthorsFilter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(51)))), ((int)(((byte)(68)))));
             this.tbxAuthorsFilter.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbxAuthorsFilter.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(182)))), ((int)(((byte)(162)))));
-            this.tbxAuthorsFilter.Location = new System.Drawing.Point(273, 28);
+            this.tbxAuthorsFilter.Location = new System.Drawing.Point(326, 45);
             this.tbxAuthorsFilter.Name = "tbxAuthorsFilter";
-            this.tbxAuthorsFilter.Size = new System.Drawing.Size(100, 13);
+            this.tbxAuthorsFilter.Size = new System.Drawing.Size(79, 13);
             this.tbxAuthorsFilter.TabIndex = 12;
             // 
             // tbxYearFilter
@@ -790,9 +987,9 @@
             this.tbxYearFilter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(51)))), ((int)(((byte)(68)))));
             this.tbxYearFilter.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbxYearFilter.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(182)))), ((int)(((byte)(162)))));
-            this.tbxYearFilter.Location = new System.Drawing.Point(273, 61);
+            this.tbxYearFilter.Location = new System.Drawing.Point(326, 78);
             this.tbxYearFilter.Name = "tbxYearFilter";
-            this.tbxYearFilter.Size = new System.Drawing.Size(100, 13);
+            this.tbxYearFilter.Size = new System.Drawing.Size(79, 13);
             this.tbxYearFilter.TabIndex = 16;
             // 
             // tbxCategoriesFilter
@@ -800,9 +997,9 @@
             this.tbxCategoriesFilter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(51)))), ((int)(((byte)(68)))));
             this.tbxCategoriesFilter.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbxCategoriesFilter.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(182)))), ((int)(((byte)(162)))));
-            this.tbxCategoriesFilter.Location = new System.Drawing.Point(157, 61);
+            this.tbxCategoriesFilter.Location = new System.Drawing.Point(220, 78);
             this.tbxCategoriesFilter.Name = "tbxCategoriesFilter";
-            this.tbxCategoriesFilter.Size = new System.Drawing.Size(100, 13);
+            this.tbxCategoriesFilter.Size = new System.Drawing.Size(79, 13);
             this.tbxCategoriesFilter.TabIndex = 15;
             // 
             // tbxSubtitlesFilter
@@ -810,9 +1007,9 @@
             this.tbxSubtitlesFilter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(51)))), ((int)(((byte)(68)))));
             this.tbxSubtitlesFilter.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbxSubtitlesFilter.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(182)))), ((int)(((byte)(162)))));
-            this.tbxSubtitlesFilter.Location = new System.Drawing.Point(38, 61);
+            this.tbxSubtitlesFilter.Location = new System.Drawing.Point(122, 78);
             this.tbxSubtitlesFilter.Name = "tbxSubtitlesFilter";
-            this.tbxSubtitlesFilter.Size = new System.Drawing.Size(100, 13);
+            this.tbxSubtitlesFilter.Size = new System.Drawing.Size(79, 13);
             this.tbxSubtitlesFilter.TabIndex = 14;
             // 
             // tbxISBNFilter
@@ -820,42 +1017,97 @@
             this.tbxISBNFilter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(51)))), ((int)(((byte)(68)))));
             this.tbxISBNFilter.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbxISBNFilter.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(182)))), ((int)(((byte)(162)))));
-            this.tbxISBNFilter.Location = new System.Drawing.Point(38, 28);
+            this.tbxISBNFilter.Location = new System.Drawing.Point(122, 45);
             this.tbxISBNFilter.Name = "tbxISBNFilter";
-            this.tbxISBNFilter.Size = new System.Drawing.Size(100, 13);
+            this.tbxISBNFilter.Size = new System.Drawing.Size(79, 13);
             this.tbxISBNFilter.TabIndex = 10;
             // 
             // viewBooks
             // 
             this.viewBooks.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(51)))), ((int)(((byte)(68)))));
             this.viewBooks.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.viewBooks.Location = new System.Drawing.Point(0, 91);
+            this.viewBooks.Location = new System.Drawing.Point(0, 124);
             this.viewBooks.Name = "viewBooks";
-            this.viewBooks.Size = new System.Drawing.Size(725, 489);
+            this.viewBooks.Size = new System.Drawing.Size(725, 456);
             this.viewBooks.TabIndex = 1;
+            this.viewBooks.SelectionChanged += new System.EventHandler(this.viewBooks_SelectionChanged);
             // 
-            // tabPage1
+            // tabManageUsers
             // 
-            this.tabPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(182)))), ((int)(((byte)(162)))));
-            this.tabPage1.Controls.Add(this.tabControl1);
-            this.tabPage1.Controls.Add(this.label11);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(725, 580);
-            this.tabPage1.TabIndex = 3;
-            this.tabPage1.Text = "tabPage1";
+            this.tabManageUsers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(182)))), ((int)(((byte)(162)))));
+            this.tabManageUsers.Controls.Add(this.btnGoToEditUser);
+            this.tabManageUsers.Controls.Add(this.btnGoToRemoveUser);
+            this.tabManageUsers.Controls.Add(this.btnGoToAddUser);
+            this.tabManageUsers.Controls.Add(this.UserManagementTabControl);
+            this.tabManageUsers.Controls.Add(this.label11);
+            this.tabManageUsers.Location = new System.Drawing.Point(4, 22);
+            this.tabManageUsers.Name = "tabManageUsers";
+            this.tabManageUsers.Padding = new System.Windows.Forms.Padding(3);
+            this.tabManageUsers.Size = new System.Drawing.Size(725, 580);
+            this.tabManageUsers.TabIndex = 3;
+            this.tabManageUsers.Text = "MANAGE USERS";
             // 
-            // tabControl1
+            // btnGoToEditUser
             // 
-            this.tabControl1.Controls.Add(this.tabAddUser);
-            this.tabControl1.Controls.Add(this.tabRemoveUser);
-            this.tabControl1.Controls.Add(this.tabModifyUser);
-            this.tabControl1.Location = new System.Drawing.Point(10, 65);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(707, 512);
-            this.tabControl1.TabIndex = 1;
+            this.btnGoToEditUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(51)))), ((int)(((byte)(68)))));
+            this.btnGoToEditUser.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnGoToEditUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(182)))), ((int)(((byte)(162)))));
+            this.btnGoToEditUser.IconChar = FontAwesome.Sharp.IconChar.Edit;
+            this.btnGoToEditUser.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(182)))), ((int)(((byte)(162)))));
+            this.btnGoToEditUser.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnGoToEditUser.IconSize = 20;
+            this.btnGoToEditUser.Location = new System.Drawing.Point(72, 36);
+            this.btnGoToEditUser.Name = "btnGoToEditUser";
+            this.btnGoToEditUser.Size = new System.Drawing.Size(25, 23);
+            this.btnGoToEditUser.TabIndex = 9;
+            this.btnGoToEditUser.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnGoToEditUser.UseVisualStyleBackColor = false;
+            this.btnGoToEditUser.Click += new System.EventHandler(this.btnGoToEditUser_Click);
+            // 
+            // btnGoToRemoveUser
+            // 
+            this.btnGoToRemoveUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(51)))), ((int)(((byte)(68)))));
+            this.btnGoToRemoveUser.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnGoToRemoveUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(182)))), ((int)(((byte)(162)))));
+            this.btnGoToRemoveUser.IconChar = FontAwesome.Sharp.IconChar.Minus;
+            this.btnGoToRemoveUser.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(182)))), ((int)(((byte)(162)))));
+            this.btnGoToRemoveUser.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnGoToRemoveUser.IconSize = 20;
+            this.btnGoToRemoveUser.Location = new System.Drawing.Point(41, 36);
+            this.btnGoToRemoveUser.Name = "btnGoToRemoveUser";
+            this.btnGoToRemoveUser.Size = new System.Drawing.Size(25, 23);
+            this.btnGoToRemoveUser.TabIndex = 8;
+            this.btnGoToRemoveUser.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnGoToRemoveUser.UseVisualStyleBackColor = false;
+            this.btnGoToRemoveUser.Click += new System.EventHandler(this.btnGoToRemoveUser_Click);
+            // 
+            // btnGoToAddUser
+            // 
+            this.btnGoToAddUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(51)))), ((int)(((byte)(68)))));
+            this.btnGoToAddUser.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnGoToAddUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(182)))), ((int)(((byte)(162)))));
+            this.btnGoToAddUser.IconChar = FontAwesome.Sharp.IconChar.Plus;
+            this.btnGoToAddUser.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(182)))), ((int)(((byte)(162)))));
+            this.btnGoToAddUser.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnGoToAddUser.IconSize = 20;
+            this.btnGoToAddUser.Location = new System.Drawing.Point(10, 36);
+            this.btnGoToAddUser.Name = "btnGoToAddUser";
+            this.btnGoToAddUser.Size = new System.Drawing.Size(25, 23);
+            this.btnGoToAddUser.TabIndex = 7;
+            this.btnGoToAddUser.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnGoToAddUser.UseVisualStyleBackColor = false;
+            this.btnGoToAddUser.Click += new System.EventHandler(this.btnGoToAddUser_Click);
+            // 
+            // UserManagementTabControl
+            // 
+            this.UserManagementTabControl.Controls.Add(this.tabAddUser);
+            this.UserManagementTabControl.Controls.Add(this.tabRemoveUser);
+            this.UserManagementTabControl.Controls.Add(this.tabModifyUser);
+            this.UserManagementTabControl.Location = new System.Drawing.Point(10, 65);
+            this.UserManagementTabControl.Name = "UserManagementTabControl";
+            this.UserManagementTabControl.SelectedIndex = 0;
+            this.UserManagementTabControl.Size = new System.Drawing.Size(707, 512);
+            this.UserManagementTabControl.TabIndex = 1;
             // 
             // tabAddUser
             // 
@@ -1404,28 +1656,82 @@
             this.label11.Text = "USER MANAGEMENT";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // tabPage2
+            // tabManageBooks
             // 
-            this.tabPage2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(182)))), ((int)(((byte)(162)))));
-            this.tabPage2.Controls.Add(this.tabControl2);
-            this.tabPage2.Controls.Add(this.label60);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(725, 580);
-            this.tabPage2.TabIndex = 4;
-            this.tabPage2.Text = "tabPage2";
+            this.tabManageBooks.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(182)))), ((int)(((byte)(162)))));
+            this.tabManageBooks.Controls.Add(this.btnGoToEditBook);
+            this.tabManageBooks.Controls.Add(this.btnGoToRemoveBook);
+            this.tabManageBooks.Controls.Add(this.btnGoToAddBook);
+            this.tabManageBooks.Controls.Add(this.BookManagementTabControl);
+            this.tabManageBooks.Controls.Add(this.label60);
+            this.tabManageBooks.Location = new System.Drawing.Point(4, 22);
+            this.tabManageBooks.Name = "tabManageBooks";
+            this.tabManageBooks.Padding = new System.Windows.Forms.Padding(3);
+            this.tabManageBooks.Size = new System.Drawing.Size(725, 580);
+            this.tabManageBooks.TabIndex = 4;
+            this.tabManageBooks.Text = "MANAGE BOOKS";
             // 
-            // tabControl2
+            // btnGoToEditBook
             // 
-            this.tabControl2.Controls.Add(this.tabPage3);
-            this.tabControl2.Controls.Add(this.tabPage4);
-            this.tabControl2.Controls.Add(this.tabPage5);
-            this.tabControl2.Location = new System.Drawing.Point(10, 65);
-            this.tabControl2.Name = "tabControl2";
-            this.tabControl2.SelectedIndex = 0;
-            this.tabControl2.Size = new System.Drawing.Size(707, 512);
-            this.tabControl2.TabIndex = 3;
+            this.btnGoToEditBook.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(51)))), ((int)(((byte)(68)))));
+            this.btnGoToEditBook.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnGoToEditBook.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(182)))), ((int)(((byte)(162)))));
+            this.btnGoToEditBook.IconChar = FontAwesome.Sharp.IconChar.Edit;
+            this.btnGoToEditBook.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(182)))), ((int)(((byte)(162)))));
+            this.btnGoToEditBook.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnGoToEditBook.IconSize = 20;
+            this.btnGoToEditBook.Location = new System.Drawing.Point(72, 33);
+            this.btnGoToEditBook.Name = "btnGoToEditBook";
+            this.btnGoToEditBook.Size = new System.Drawing.Size(25, 23);
+            this.btnGoToEditBook.TabIndex = 6;
+            this.btnGoToEditBook.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnGoToEditBook.UseVisualStyleBackColor = false;
+            this.btnGoToEditBook.Click += new System.EventHandler(this.btnGoToEditBook_Click);
+            // 
+            // btnGoToRemoveBook
+            // 
+            this.btnGoToRemoveBook.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(51)))), ((int)(((byte)(68)))));
+            this.btnGoToRemoveBook.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnGoToRemoveBook.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(182)))), ((int)(((byte)(162)))));
+            this.btnGoToRemoveBook.IconChar = FontAwesome.Sharp.IconChar.Minus;
+            this.btnGoToRemoveBook.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(182)))), ((int)(((byte)(162)))));
+            this.btnGoToRemoveBook.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnGoToRemoveBook.IconSize = 20;
+            this.btnGoToRemoveBook.Location = new System.Drawing.Point(41, 33);
+            this.btnGoToRemoveBook.Name = "btnGoToRemoveBook";
+            this.btnGoToRemoveBook.Size = new System.Drawing.Size(25, 23);
+            this.btnGoToRemoveBook.TabIndex = 5;
+            this.btnGoToRemoveBook.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnGoToRemoveBook.UseVisualStyleBackColor = false;
+            this.btnGoToRemoveBook.Click += new System.EventHandler(this.btnGoToRemoveBook_Click);
+            // 
+            // btnGoToAddBook
+            // 
+            this.btnGoToAddBook.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(51)))), ((int)(((byte)(68)))));
+            this.btnGoToAddBook.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnGoToAddBook.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(182)))), ((int)(((byte)(162)))));
+            this.btnGoToAddBook.IconChar = FontAwesome.Sharp.IconChar.Plus;
+            this.btnGoToAddBook.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(182)))), ((int)(((byte)(162)))));
+            this.btnGoToAddBook.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnGoToAddBook.IconSize = 20;
+            this.btnGoToAddBook.Location = new System.Drawing.Point(10, 33);
+            this.btnGoToAddBook.Name = "btnGoToAddBook";
+            this.btnGoToAddBook.Size = new System.Drawing.Size(25, 23);
+            this.btnGoToAddBook.TabIndex = 4;
+            this.btnGoToAddBook.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnGoToAddBook.UseVisualStyleBackColor = false;
+            this.btnGoToAddBook.Click += new System.EventHandler(this.btnGoToAddBook_Click);
+            // 
+            // BookManagementTabControl
+            // 
+            this.BookManagementTabControl.Controls.Add(this.tabPage3);
+            this.BookManagementTabControl.Controls.Add(this.tabPage4);
+            this.BookManagementTabControl.Controls.Add(this.tabPage5);
+            this.BookManagementTabControl.Location = new System.Drawing.Point(10, 62);
+            this.BookManagementTabControl.Name = "BookManagementTabControl";
+            this.BookManagementTabControl.SelectedIndex = 0;
+            this.BookManagementTabControl.Size = new System.Drawing.Size(707, 515);
+            this.BookManagementTabControl.TabIndex = 3;
             // 
             // tabPage3
             // 
@@ -1459,7 +1765,7 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(699, 486);
+            this.tabPage3.Size = new System.Drawing.Size(699, 489);
             this.tabPage3.TabIndex = 0;
             this.tabPage3.Text = "ADD";
             // 
@@ -1749,7 +2055,7 @@
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(699, 486);
+            this.tabPage4.Size = new System.Drawing.Size(699, 489);
             this.tabPage4.TabIndex = 1;
             this.tabPage4.Text = "REMOVE";
             // 
@@ -1833,7 +2139,7 @@
             this.tabPage5.Location = new System.Drawing.Point(4, 22);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(699, 486);
+            this.tabPage5.Size = new System.Drawing.Size(699, 489);
             this.tabPage5.TabIndex = 2;
             this.tabPage5.Text = "MODIFY";
             // 
@@ -2158,28 +2464,31 @@
             this.label60.Text = "BOOKS MANAGEMENT";
             this.label60.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // tabPage6
+            // tabLoans
             // 
-            this.tabPage6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(182)))), ((int)(((byte)(162)))));
-            this.tabPage6.Controls.Add(this.tabControl3);
-            this.tabPage6.Controls.Add(this.label73);
-            this.tabPage6.Location = new System.Drawing.Point(4, 22);
-            this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage6.Size = new System.Drawing.Size(725, 580);
-            this.tabPage6.TabIndex = 5;
-            this.tabPage6.Text = "tabPage6";
+            this.tabLoans.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(182)))), ((int)(((byte)(162)))));
+            this.tabLoans.Controls.Add(this.btnGoToViewLoan);
+            this.tabLoans.Controls.Add(this.btnGoToRemoveLoan);
+            this.tabLoans.Controls.Add(this.btnGoToAddLoan);
+            this.tabLoans.Controls.Add(this.ManageLoansTabControl);
+            this.tabLoans.Controls.Add(this.label73);
+            this.tabLoans.Location = new System.Drawing.Point(4, 22);
+            this.tabLoans.Name = "tabLoans";
+            this.tabLoans.Padding = new System.Windows.Forms.Padding(3);
+            this.tabLoans.Size = new System.Drawing.Size(725, 580);
+            this.tabLoans.TabIndex = 5;
+            this.tabLoans.Text = "LOANS";
             // 
-            // tabControl3
+            // ManageLoansTabControl
             // 
-            this.tabControl3.Controls.Add(this.tabPage7);
-            this.tabControl3.Controls.Add(this.tabPage8);
-            this.tabControl3.Controls.Add(this.tabPage9);
-            this.tabControl3.Location = new System.Drawing.Point(7, 72);
-            this.tabControl3.Name = "tabControl3";
-            this.tabControl3.SelectedIndex = 0;
-            this.tabControl3.Size = new System.Drawing.Size(710, 501);
-            this.tabControl3.TabIndex = 4;
+            this.ManageLoansTabControl.Controls.Add(this.tabPage7);
+            this.ManageLoansTabControl.Controls.Add(this.tabPage8);
+            this.ManageLoansTabControl.Controls.Add(this.tabPage9);
+            this.ManageLoansTabControl.Location = new System.Drawing.Point(7, 72);
+            this.ManageLoansTabControl.Name = "ManageLoansTabControl";
+            this.ManageLoansTabControl.SelectedIndex = 0;
+            this.ManageLoansTabControl.Size = new System.Drawing.Size(710, 501);
+            this.ManageLoansTabControl.TabIndex = 4;
             // 
             // tabPage7
             // 
@@ -2201,7 +2510,7 @@
             this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage7.Size = new System.Drawing.Size(702, 475);
             this.tabPage7.TabIndex = 0;
-            this.tabPage7.Text = "tabPage7";
+            this.tabPage7.Text = "ADD";
             // 
             // label85
             // 
@@ -2347,7 +2656,28 @@
             this.tabPage8.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage8.Size = new System.Drawing.Size(702, 475);
             this.tabPage8.TabIndex = 1;
-            this.tabPage8.Text = "tabPage8";
+            this.tabPage8.Text = "VIEW";
+            // 
+            // label87
+            // 
+            this.label87.AutoSize = true;
+            this.label87.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label87.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(182)))), ((int)(((byte)(162)))));
+            this.label87.Location = new System.Drawing.Point(240, 68);
+            this.label87.Name = "label87";
+            this.label87.Size = new System.Drawing.Size(70, 20);
+            this.label87.TabIndex = 32;
+            this.label87.Text = "Loan ID:";
+            // 
+            // tbxFilterLoanID
+            // 
+            this.tbxFilterLoanID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(182)))), ((int)(((byte)(162)))));
+            this.tbxFilterLoanID.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbxFilterLoanID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(51)))), ((int)(((byte)(68)))));
+            this.tbxFilterLoanID.Location = new System.Drawing.Point(244, 100);
+            this.tbxFilterLoanID.Name = "tbxFilterLoanID";
+            this.tbxFilterLoanID.Size = new System.Drawing.Size(86, 13);
+            this.tbxFilterLoanID.TabIndex = 31;
             // 
             // label83
             // 
@@ -2464,23 +2794,68 @@
             // tabPage9
             // 
             this.tabPage9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(51)))), ((int)(((byte)(68)))));
+            this.tabPage9.Controls.Add(this.label89);
+            this.tabPage9.Controls.Add(this.nudRating);
+            this.tabPage9.Controls.Add(this.label88);
+            this.tabPage9.Controls.Add(this.tbxRemoveLoanBookISBN);
             this.tabPage9.Controls.Add(this.btnRemoveLoan);
             this.tabPage9.Controls.Add(this.label86);
-            this.tabPage9.Controls.Add(this.textBox1);
+            this.tabPage9.Controls.Add(this.tbxRemoveLoanID);
             this.tabPage9.Controls.Add(this.label84);
             this.tabPage9.Location = new System.Drawing.Point(4, 22);
             this.tabPage9.Name = "tabPage9";
             this.tabPage9.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage9.Size = new System.Drawing.Size(702, 475);
             this.tabPage9.TabIndex = 2;
-            this.tabPage9.Text = "tabPage9";
+            this.tabPage9.Text = "REMOVE";
+            // 
+            // label89
+            // 
+            this.label89.AutoSize = true;
+            this.label89.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label89.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(182)))), ((int)(((byte)(162)))));
+            this.label89.Location = new System.Drawing.Point(309, 187);
+            this.label89.Name = "label89";
+            this.label89.Size = new System.Drawing.Size(60, 20);
+            this.label89.TabIndex = 29;
+            this.label89.Text = "Rating:";
+            // 
+            // nudRating
+            // 
+            this.nudRating.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(182)))), ((int)(((byte)(162)))));
+            this.nudRating.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(51)))), ((int)(((byte)(68)))));
+            this.nudRating.Location = new System.Drawing.Point(313, 210);
+            this.nudRating.Name = "nudRating";
+            this.nudRating.Size = new System.Drawing.Size(64, 20);
+            this.nudRating.TabIndex = 28;
+            // 
+            // label88
+            // 
+            this.label88.AutoSize = true;
+            this.label88.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label88.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(182)))), ((int)(((byte)(162)))));
+            this.label88.Location = new System.Drawing.Point(410, 122);
+            this.label88.Name = "label88";
+            this.label88.Size = new System.Drawing.Size(92, 20);
+            this.label88.TabIndex = 27;
+            this.label88.Text = "Book ISBN:";
+            // 
+            // tbxRemoveLoanBookISBN
+            // 
+            this.tbxRemoveLoanBookISBN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(182)))), ((int)(((byte)(162)))));
+            this.tbxRemoveLoanBookISBN.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbxRemoveLoanBookISBN.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(51)))), ((int)(((byte)(68)))));
+            this.tbxRemoveLoanBookISBN.Location = new System.Drawing.Point(366, 145);
+            this.tbxRemoveLoanBookISBN.Name = "tbxRemoveLoanBookISBN";
+            this.tbxRemoveLoanBookISBN.Size = new System.Drawing.Size(184, 13);
+            this.tbxRemoveLoanBookISBN.TabIndex = 26;
             // 
             // btnRemoveLoan
             // 
             this.btnRemoveLoan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRemoveLoan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRemoveLoan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(182)))), ((int)(((byte)(162)))));
-            this.btnRemoveLoan.Location = new System.Drawing.Point(260, 153);
+            this.btnRemoveLoan.Location = new System.Drawing.Point(253, 254);
             this.btnRemoveLoan.Name = "btnRemoveLoan";
             this.btnRemoveLoan.Size = new System.Drawing.Size(184, 35);
             this.btnRemoveLoan.TabIndex = 25;
@@ -2493,21 +2868,21 @@
             this.label86.AutoSize = true;
             this.label86.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label86.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(182)))), ((int)(((byte)(162)))));
-            this.label86.Location = new System.Drawing.Point(314, 98);
+            this.label86.Location = new System.Drawing.Point(198, 122);
             this.label86.Name = "label86";
             this.label86.Size = new System.Drawing.Size(70, 20);
             this.label86.TabIndex = 24;
             this.label86.Text = "Loan ID:";
             // 
-            // textBox1
+            // tbxRemoveLoanID
             // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(182)))), ((int)(((byte)(162)))));
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(51)))), ((int)(((byte)(68)))));
-            this.textBox1.Location = new System.Drawing.Point(260, 121);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(184, 13);
-            this.textBox1.TabIndex = 23;
+            this.tbxRemoveLoanID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(182)))), ((int)(((byte)(162)))));
+            this.tbxRemoveLoanID.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbxRemoveLoanID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(51)))), ((int)(((byte)(68)))));
+            this.tbxRemoveLoanID.Location = new System.Drawing.Point(144, 145);
+            this.tbxRemoveLoanID.Name = "tbxRemoveLoanID";
+            this.tbxRemoveLoanID.Size = new System.Drawing.Size(184, 13);
+            this.tbxRemoveLoanID.TabIndex = 23;
             // 
             // label84
             // 
@@ -2531,26 +2906,190 @@
             this.label73.Text = "LOAN MANAGEMENT";
             this.label73.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label87
+            // tabDashBoard
             // 
-            this.label87.AutoSize = true;
-            this.label87.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label87.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(182)))), ((int)(((byte)(162)))));
-            this.label87.Location = new System.Drawing.Point(240, 68);
-            this.label87.Name = "label87";
-            this.label87.Size = new System.Drawing.Size(70, 20);
-            this.label87.TabIndex = 32;
-            this.label87.Text = "Loan ID:";
+            this.tabDashBoard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(182)))), ((int)(((byte)(162)))));
+            this.tabDashBoard.Controls.Add(this.label92);
+            this.tabDashBoard.Controls.Add(this.label91);
+            this.tabDashBoard.Controls.Add(this.cmbChoseFilterDashboard);
+            this.tabDashBoard.Controls.Add(this.btnGetFileDownload);
+            this.tabDashBoard.Controls.Add(this.btnFilterDashboard);
+            this.tabDashBoard.Controls.Add(this.viewDashboard);
+            this.tabDashBoard.Location = new System.Drawing.Point(4, 22);
+            this.tabDashBoard.Name = "tabDashBoard";
+            this.tabDashBoard.Padding = new System.Windows.Forms.Padding(3);
+            this.tabDashBoard.Size = new System.Drawing.Size(725, 580);
+            this.tabDashBoard.TabIndex = 6;
+            this.tabDashBoard.Text = "DASHBOARD";
             // 
-            // tbxFilterLoanID
+            // label92
             // 
-            this.tbxFilterLoanID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(182)))), ((int)(((byte)(162)))));
-            this.tbxFilterLoanID.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbxFilterLoanID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(51)))), ((int)(((byte)(68)))));
-            this.tbxFilterLoanID.Location = new System.Drawing.Point(244, 100);
-            this.tbxFilterLoanID.Name = "tbxFilterLoanID";
-            this.tbxFilterLoanID.Size = new System.Drawing.Size(86, 13);
-            this.tbxFilterLoanID.TabIndex = 31;
+            this.label92.AutoSize = true;
+            this.label92.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label92.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(51)))), ((int)(((byte)(68)))));
+            this.label92.Location = new System.Drawing.Point(51, 45);
+            this.label92.Name = "label92";
+            this.label92.Size = new System.Drawing.Size(73, 20);
+            this.label92.TabIndex = 14;
+            this.label92.Text = "Order by:";
+            // 
+            // label91
+            // 
+            this.label91.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label91.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(51)))), ((int)(((byte)(68)))));
+            this.label91.Location = new System.Drawing.Point(0, 3);
+            this.label91.Name = "label91";
+            this.label91.Size = new System.Drawing.Size(722, 36);
+            this.label91.TabIndex = 6;
+            this.label91.Text = "DASHBOARD";
+            this.label91.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // cmbChoseFilterDashboard
+            // 
+            this.cmbChoseFilterDashboard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(51)))), ((int)(((byte)(68)))));
+            this.cmbChoseFilterDashboard.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(182)))), ((int)(((byte)(162)))));
+            this.cmbChoseFilterDashboard.FormattingEnabled = true;
+            this.cmbChoseFilterDashboard.Items.AddRange(new object[] {
+            "Most liked",
+            "Least liked",
+            "Most requested",
+            "Less required"});
+            this.cmbChoseFilterDashboard.Location = new System.Drawing.Point(55, 68);
+            this.cmbChoseFilterDashboard.Name = "cmbChoseFilterDashboard";
+            this.cmbChoseFilterDashboard.Size = new System.Drawing.Size(121, 21);
+            this.cmbChoseFilterDashboard.TabIndex = 5;
+            // 
+            // btnGetFileDownload
+            // 
+            this.btnGetFileDownload.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(51)))), ((int)(((byte)(68)))));
+            this.btnGetFileDownload.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnGetFileDownload.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGetFileDownload.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(182)))), ((int)(((byte)(162)))));
+            this.btnGetFileDownload.Location = new System.Drawing.Point(590, 53);
+            this.btnGetFileDownload.Name = "btnGetFileDownload";
+            this.btnGetFileDownload.Size = new System.Drawing.Size(102, 49);
+            this.btnGetFileDownload.TabIndex = 4;
+            this.btnGetFileDownload.Text = "DOWNLOAD PDF";
+            this.btnGetFileDownload.UseVisualStyleBackColor = false;
+            this.btnGetFileDownload.Click += new System.EventHandler(this.btnGetFileDownload_Click);
+            // 
+            // btnFilterDashboard
+            // 
+            this.btnFilterDashboard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(51)))), ((int)(((byte)(68)))));
+            this.btnFilterDashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFilterDashboard.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(182)))), ((int)(((byte)(162)))));
+            this.btnFilterDashboard.Location = new System.Drawing.Point(453, 53);
+            this.btnFilterDashboard.Name = "btnFilterDashboard";
+            this.btnFilterDashboard.Size = new System.Drawing.Size(102, 49);
+            this.btnFilterDashboard.TabIndex = 3;
+            this.btnFilterDashboard.Text = "FILTER";
+            this.btnFilterDashboard.UseVisualStyleBackColor = false;
+            this.btnFilterDashboard.Click += new System.EventHandler(this.btnFilterDashboard_Click);
+            // 
+            // viewDashboard
+            // 
+            this.viewDashboard.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(51)))), ((int)(((byte)(68)))));
+            this.viewDashboard.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.viewDashboard.Location = new System.Drawing.Point(0, 124);
+            this.viewDashboard.Name = "viewDashboard";
+            this.viewDashboard.Size = new System.Drawing.Size(725, 456);
+            this.viewDashboard.TabIndex = 2;
+            // 
+            // tabHistory
+            // 
+            this.tabHistory.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(182)))), ((int)(((byte)(162)))));
+            this.tabHistory.Controls.Add(this.label94);
+            this.tabHistory.Controls.Add(this.label93);
+            this.tabHistory.Controls.Add(this.viewHistory);
+            this.tabHistory.Location = new System.Drawing.Point(4, 22);
+            this.tabHistory.Name = "tabHistory";
+            this.tabHistory.Padding = new System.Windows.Forms.Padding(3);
+            this.tabHistory.Size = new System.Drawing.Size(725, 580);
+            this.tabHistory.TabIndex = 7;
+            this.tabHistory.Text = "HISTORY";
+            // 
+            // label94
+            // 
+            this.label94.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label94.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(51)))), ((int)(((byte)(68)))));
+            this.label94.Location = new System.Drawing.Point(0, 56);
+            this.label94.Name = "label94";
+            this.label94.Size = new System.Drawing.Size(722, 36);
+            this.label94.TabIndex = 5;
+            this.label94.Text = "Here you can see all the books you have read";
+            this.label94.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label93
+            // 
+            this.label93.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label93.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(51)))), ((int)(((byte)(68)))));
+            this.label93.Location = new System.Drawing.Point(0, 0);
+            this.label93.Name = "label93";
+            this.label93.Size = new System.Drawing.Size(722, 36);
+            this.label93.TabIndex = 4;
+            this.label93.Text = "YOUR HISTORY";
+            this.label93.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // viewHistory
+            // 
+            this.viewHistory.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.viewHistory.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(51)))), ((int)(((byte)(68)))));
+            this.viewHistory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.viewHistory.Location = new System.Drawing.Point(0, 124);
+            this.viewHistory.Name = "viewHistory";
+            this.viewHistory.Size = new System.Drawing.Size(725, 456);
+            this.viewHistory.TabIndex = 3;
+            // 
+            // btnGoToViewLoan
+            // 
+            this.btnGoToViewLoan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(51)))), ((int)(((byte)(68)))));
+            this.btnGoToViewLoan.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnGoToViewLoan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(182)))), ((int)(((byte)(162)))));
+            this.btnGoToViewLoan.IconChar = FontAwesome.Sharp.IconChar.Eye;
+            this.btnGoToViewLoan.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(182)))), ((int)(((byte)(162)))));
+            this.btnGoToViewLoan.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnGoToViewLoan.IconSize = 20;
+            this.btnGoToViewLoan.Location = new System.Drawing.Point(42, 43);
+            this.btnGoToViewLoan.Name = "btnGoToViewLoan";
+            this.btnGoToViewLoan.Size = new System.Drawing.Size(25, 23);
+            this.btnGoToViewLoan.TabIndex = 9;
+            this.btnGoToViewLoan.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnGoToViewLoan.UseVisualStyleBackColor = false;
+            this.btnGoToViewLoan.Click += new System.EventHandler(this.btnGoToViewLoan_Click);
+            // 
+            // btnGoToRemoveLoan
+            // 
+            this.btnGoToRemoveLoan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(51)))), ((int)(((byte)(68)))));
+            this.btnGoToRemoveLoan.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnGoToRemoveLoan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(182)))), ((int)(((byte)(162)))));
+            this.btnGoToRemoveLoan.IconChar = FontAwesome.Sharp.IconChar.Minus;
+            this.btnGoToRemoveLoan.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(182)))), ((int)(((byte)(162)))));
+            this.btnGoToRemoveLoan.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnGoToRemoveLoan.IconSize = 20;
+            this.btnGoToRemoveLoan.Location = new System.Drawing.Point(73, 43);
+            this.btnGoToRemoveLoan.Name = "btnGoToRemoveLoan";
+            this.btnGoToRemoveLoan.Size = new System.Drawing.Size(25, 23);
+            this.btnGoToRemoveLoan.TabIndex = 8;
+            this.btnGoToRemoveLoan.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnGoToRemoveLoan.UseVisualStyleBackColor = false;
+            this.btnGoToRemoveLoan.Click += new System.EventHandler(this.btnGoToRemoveLoan_Click);
+            // 
+            // btnGoToAddLoan
+            // 
+            this.btnGoToAddLoan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(51)))), ((int)(((byte)(68)))));
+            this.btnGoToAddLoan.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnGoToAddLoan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(182)))), ((int)(((byte)(162)))));
+            this.btnGoToAddLoan.IconChar = FontAwesome.Sharp.IconChar.Plus;
+            this.btnGoToAddLoan.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(182)))), ((int)(((byte)(162)))));
+            this.btnGoToAddLoan.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnGoToAddLoan.IconSize = 20;
+            this.btnGoToAddLoan.Location = new System.Drawing.Point(11, 43);
+            this.btnGoToAddLoan.Name = "btnGoToAddLoan";
+            this.btnGoToAddLoan.Size = new System.Drawing.Size(25, 23);
+            this.btnGoToAddLoan.TabIndex = 7;
+            this.btnGoToAddLoan.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnGoToAddLoan.UseVisualStyleBackColor = false;
+            this.btnGoToAddLoan.Click += new System.EventHandler(this.btnGoToAddLoan_Click);
             // 
             // ManchesterLibrary
             // 
@@ -2567,6 +3106,9 @@
             this.Name = "ManchesterLibrary";
             this.Text = "Manchester Library";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ptbShowLogo)).EndInit();
+            this.panel2.ResumeLayout(false);
             this.PrimaryTabControl.ResumeLayout(false);
             this.tabPageLogin.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
@@ -2576,25 +3118,26 @@
             ((System.ComponentModel.ISupportInitialize)(this.viewUsers)).EndInit();
             this.tabViewBooks.ResumeLayout(false);
             this.tabViewBooks.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbShowThumbnail)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.viewBooks)).EndInit();
-            this.tabPage1.ResumeLayout(false);
-            this.tabControl1.ResumeLayout(false);
+            this.tabManageUsers.ResumeLayout(false);
+            this.UserManagementTabControl.ResumeLayout(false);
             this.tabAddUser.ResumeLayout(false);
             this.tabAddUser.PerformLayout();
             this.tabRemoveUser.ResumeLayout(false);
             this.tabRemoveUser.PerformLayout();
             this.tabModifyUser.ResumeLayout(false);
             this.tabModifyUser.PerformLayout();
-            this.tabPage2.ResumeLayout(false);
-            this.tabControl2.ResumeLayout(false);
+            this.tabManageBooks.ResumeLayout(false);
+            this.BookManagementTabControl.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
             this.tabPage5.ResumeLayout(false);
             this.tabPage5.PerformLayout();
-            this.tabPage6.ResumeLayout(false);
-            this.tabControl3.ResumeLayout(false);
+            this.tabLoans.ResumeLayout(false);
+            this.ManageLoansTabControl.ResumeLayout(false);
             this.tabPage7.ResumeLayout(false);
             this.tabPage7.PerformLayout();
             this.tabPage8.ResumeLayout(false);
@@ -2602,6 +3145,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.viewLoans)).EndInit();
             this.tabPage9.ResumeLayout(false);
             this.tabPage9.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudRating)).EndInit();
+            this.tabDashBoard.ResumeLayout(false);
+            this.tabDashBoard.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.viewDashboard)).EndInit();
+            this.tabHistory.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.viewHistory)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2651,9 +3200,9 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage tabManageUsers;
+        private System.Windows.Forms.TabPage tabManageBooks;
+        private System.Windows.Forms.TabControl UserManagementTabControl;
         private System.Windows.Forms.TabPage tabAddUser;
         private System.Windows.Forms.TextBox tbxAddUserPw;
         private System.Windows.Forms.TextBox tbxAddUserCity;
@@ -2705,7 +3254,7 @@
         private System.Windows.Forms.Label label62;
         private System.Windows.Forms.TextBox tbxPageFilter;
         private System.Windows.Forms.TextBox tbxRatingFilter;
-        private System.Windows.Forms.TabControl tabControl2;
+        private System.Windows.Forms.TabControl BookManagementTabControl;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.Button btnAddBook;
         private System.Windows.Forms.Label label39;
@@ -2751,7 +3300,7 @@
         private System.Windows.Forms.TextBox tbxSearchBook;
         private System.Windows.Forms.Label label59;
         private System.Windows.Forms.Label label60;
-        private System.Windows.Forms.TabPage tabPage6;
+        private System.Windows.Forms.TabPage tabLoans;
         private System.Windows.Forms.Label label63;
         private System.Windows.Forms.Label label64;
         private System.Windows.Forms.TextBox tbxDescriptionFilter;
@@ -2776,7 +3325,7 @@
         private System.Windows.Forms.TextBox tbxModifyBookQuantity;
         private System.Windows.Forms.RichTextBox rtbxModifyBookDescription;
         private System.Windows.Forms.Label label73;
-        private System.Windows.Forms.TabControl tabControl3;
+        private System.Windows.Forms.TabControl ManageLoansTabControl;
         private System.Windows.Forms.TabPage tabPage7;
         private System.Windows.Forms.TabPage tabPage8;
         private System.Windows.Forms.Label label78;
@@ -2806,9 +3355,43 @@
         private System.Windows.Forms.Label label84;
         private System.Windows.Forms.Button btnRemoveLoan;
         private System.Windows.Forms.Label label86;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbxRemoveLoanID;
         private System.Windows.Forms.Label label87;
         private System.Windows.Forms.TextBox tbxFilterLoanID;
+        private System.Windows.Forms.Label label88;
+        private System.Windows.Forms.TextBox tbxRemoveLoanBookISBN;
+        private System.Windows.Forms.Label label89;
+        private System.Windows.Forms.NumericUpDown nudRating;
+        private System.Windows.Forms.PictureBox ptbShowThumbnail;
+        private System.Windows.Forms.PictureBox ptbShowLogo;
+        private System.Windows.Forms.Label label90;
+        private System.Windows.Forms.TabPage tabDashBoard;
+        private System.Windows.Forms.ComboBox cmbChoseFilterDashboard;
+        private System.Windows.Forms.Button btnGetFileDownload;
+        private System.Windows.Forms.Button btnFilterDashboard;
+        private System.Windows.Forms.DataGridView viewDashboard;
+        private FontAwesome.Sharp.IconButton btnGoToDashboard;
+        private FontAwesome.Sharp.IconButton btnGoToLoans;
+        private FontAwesome.Sharp.IconButton btnGoToUsersManagement;
+        private FontAwesome.Sharp.IconButton btnGoToBookManagement;
+        private FontAwesome.Sharp.IconButton btnGoToUsers;
+        private FontAwesome.Sharp.IconButton btnGoToBooks;
+        private System.Windows.Forms.Label label91;
+        private System.Windows.Forms.TabPage tabHistory;
+        private System.Windows.Forms.DataGridView viewHistory;
+        private System.Windows.Forms.Label label92;
+        private FontAwesome.Sharp.IconButton btnGoToEditUser;
+        private FontAwesome.Sharp.IconButton btnGoToRemoveUser;
+        private FontAwesome.Sharp.IconButton btnGoToAddUser;
+        private FontAwesome.Sharp.IconButton btnGoToEditBook;
+        private FontAwesome.Sharp.IconButton btnGoToRemoveBook;
+        private FontAwesome.Sharp.IconButton btnGoToAddBook;
+        private FontAwesome.Sharp.IconButton btnGoToHistory;
+        private System.Windows.Forms.Label label94;
+        private System.Windows.Forms.Label label93;
+        private FontAwesome.Sharp.IconButton btnGoToViewLoan;
+        private FontAwesome.Sharp.IconButton btnGoToRemoveLoan;
+        private FontAwesome.Sharp.IconButton btnGoToAddLoan;
     }
 }
 
