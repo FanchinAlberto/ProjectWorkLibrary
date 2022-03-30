@@ -520,6 +520,7 @@
             this.tbxPw.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(51)))), ((int)(((byte)(68)))));
             this.tbxPw.Location = new System.Drawing.Point(140, 127);
             this.tbxPw.Name = "tbxPw";
+            this.tbxPw.PasswordChar = '*';
             this.tbxPw.Size = new System.Drawing.Size(177, 13);
             this.tbxPw.TabIndex = 3;
             // 

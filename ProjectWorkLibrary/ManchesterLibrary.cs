@@ -104,6 +104,11 @@ namespace ProjectWorkLibrary
             BookManagementTabControl.ItemSize = new Size(0, 1);
             BookManagementTabControl.SizeMode = TabSizeMode.Fixed;
 
+            ManageLoansTabControl.Appearance = TabAppearance.FlatButtons;
+            ManageLoansTabControl.ItemSize = new Size(0, 1);
+            ManageLoansTabControl.SizeMode = TabSizeMode.Fixed;
+
+
             CheckLoans(); //controllo i prestiti scaduti
         }
 
@@ -139,9 +144,12 @@ namespace ProjectWorkLibrary
             var results = from l in Loans //cerco con LINQ i prestiti dell'utente all'interno della lista e li inserisco nella history
                           where l.debtorUser == tbxUsername.Text 
                           select l;
+            var results2 = from l in ExpiredLoans //cerco con LINQ i prestiti dell'utente all'interno della lista e li inserisco nella history
+                          where l.debtorUser == tbxUsername.Text
+                          select l;
             viewHistory.DataSource = new BindingSource()
             {
-                DataSource = new BindingList<Borrow>(results.ToList())
+                DataSource = new BindingList<Borrow>(results.ToList().Concat(results2.ToList()).ToList())
             };
 
             User u = usersDict[tbxUsername.Text]; //controllo se l'utente ha diritto a un premio per i 10 libri
