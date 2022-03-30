@@ -141,16 +141,8 @@ namespace ProjectWorkLibrary
                     PrimaryTabControl.TabPages.Add(tabHistory);
                 }
             }
-            var results = from l in Loans //cerco con LINQ i prestiti dell'utente all'interno della lista e li inserisco nella history
-                          where l.debtorUser == tbxUsername.Text 
-                          select l;
-            var results2 = from l in ExpiredLoans //cerco con LINQ i prestiti dell'utente all'interno della lista e li inserisco nella history
-                          where l.debtorUser == tbxUsername.Text
-                          select l;
-            viewHistory.DataSource = new BindingSource()
-            {
-                DataSource = new BindingList<Borrow>(results.ToList().Concat(results2.ToList()).ToList())
-            };
+            
+           
 
             User u = usersDict[tbxUsername.Text]; //controllo se l'utente ha diritto a un premio per i 10 libri
             if(u.borrows.Count == 10)
@@ -160,6 +152,14 @@ namespace ProjectWorkLibrary
 
             users.First(o => o == u).hasReward = u.hasReward;
 
+            foreach(var b in Loans)
+            {
+                if(b.debtorUser == tbxUsername.Text)
+                {
+                    u.borrows.Add(b);
+                }
+            }
+            BindBorrows(u);
         }
         private void btnBookFilter_Click(object sender, EventArgs e) //filtro i libri in base a ciò che l'user inserisce nelle textbox
         {
@@ -437,12 +437,14 @@ namespace ProjectWorkLibrary
                             {
                                 Loans.Add(br);
                             }
+                            usersDict[br.debtorUser].borrows.Add(br);
                             quantity--;
                             b.Qta = quantity.ToString();
                             borrowDict.Add(tbxLoanID.Text, br);
                             BindLoans();
                             books.First(o => o == b).Qta = b.Qta;
                             BindBooks();
+                            BindBorrows(usersDict[br.debtorUser]);
                         }
                         else
                         {
@@ -777,6 +779,12 @@ namespace ProjectWorkLibrary
         private void btnGoToHistory_Click(object sender, EventArgs e)
         {
             PrimaryTabControl.SelectedTab = tabHistory;
+        }
+
+        private void BindBorrows(User u)
+        {
+            viewHistory.DataSource = null;
+            viewHistory.DataSource = u.borrows;
         }
 
     }
