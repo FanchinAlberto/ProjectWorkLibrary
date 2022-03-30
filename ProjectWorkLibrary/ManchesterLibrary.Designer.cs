@@ -39,6 +39,7 @@
             this.btnGoToBooks = new FontAwesome.Sharp.IconButton();
             this.ptbShowLogo = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnLogOut = new FontAwesome.Sharp.IconButton();
             this.label90 = new System.Windows.Forms.Label();
             this.PrimaryTabControl = new System.Windows.Forms.TabControl();
             this.tabPageLogin = new System.Windows.Forms.TabPage();
@@ -212,8 +213,11 @@
             this.label59 = new System.Windows.Forms.Label();
             this.label60 = new System.Windows.Forms.Label();
             this.tabLoans = new System.Windows.Forms.TabPage();
+            this.btnGoToViewLoan = new FontAwesome.Sharp.IconButton();
+            this.btnGoToRemoveLoan = new FontAwesome.Sharp.IconButton();
+            this.btnGoToAddLoan = new FontAwesome.Sharp.IconButton();
             this.ManageLoansTabControl = new System.Windows.Forms.TabControl();
-            this.tabPage7 = new System.Windows.Forms.TabPage();
+            this.tabPAgeAddLOan = new System.Windows.Forms.TabPage();
             this.label85 = new System.Windows.Forms.Label();
             this.tbxLoanID = new System.Windows.Forms.TextBox();
             this.label78 = new System.Windows.Forms.Label();
@@ -226,7 +230,7 @@
             this.label75 = new System.Windows.Forms.Label();
             this.tbxAddLoanBookISBN = new System.Windows.Forms.TextBox();
             this.tbxAddLoanUserCF = new System.Windows.Forms.TextBox();
-            this.tabPage8 = new System.Windows.Forms.TabPage();
+            this.tabPAgeViewLoan = new System.Windows.Forms.TabPage();
             this.label87 = new System.Windows.Forms.Label();
             this.tbxFilterLoanID = new System.Windows.Forms.TextBox();
             this.label83 = new System.Windows.Forms.Label();
@@ -240,7 +244,7 @@
             this.tbxLoanFilterCF = new System.Windows.Forms.TextBox();
             this.label79 = new System.Windows.Forms.Label();
             this.viewLoans = new System.Windows.Forms.DataGridView();
-            this.tabPage9 = new System.Windows.Forms.TabPage();
+            this.tabPAgeRemoveLoan = new System.Windows.Forms.TabPage();
             this.label89 = new System.Windows.Forms.Label();
             this.nudRating = new System.Windows.Forms.NumericUpDown();
             this.label88 = new System.Windows.Forms.Label();
@@ -261,9 +265,6 @@
             this.label94 = new System.Windows.Forms.Label();
             this.label93 = new System.Windows.Forms.Label();
             this.viewHistory = new System.Windows.Forms.DataGridView();
-            this.btnGoToViewLoan = new FontAwesome.Sharp.IconButton();
-            this.btnGoToRemoveLoan = new FontAwesome.Sharp.IconButton();
-            this.btnGoToAddLoan = new FontAwesome.Sharp.IconButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbShowLogo)).BeginInit();
             this.panel2.SuspendLayout();
@@ -287,10 +288,10 @@
             this.tabPage5.SuspendLayout();
             this.tabLoans.SuspendLayout();
             this.ManageLoansTabControl.SuspendLayout();
-            this.tabPage7.SuspendLayout();
-            this.tabPage8.SuspendLayout();
+            this.tabPAgeAddLOan.SuspendLayout();
+            this.tabPAgeViewLoan.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.viewLoans)).BeginInit();
-            this.tabPage9.SuspendLayout();
+            this.tabPAgeRemoveLoan.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudRating)).BeginInit();
             this.tabDashBoard.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.viewDashboard)).BeginInit();
@@ -439,11 +440,28 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(134)))), ((int)(((byte)(178)))));
+            this.panel2.Controls.Add(this.btnLogOut);
             this.panel2.Controls.Add(this.label90);
             this.panel2.Location = new System.Drawing.Point(198, -2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(733, 39);
             this.panel2.TabIndex = 1;
+            // 
+            // btnLogOut
+            // 
+            this.btnLogOut.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnLogOut.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(182)))), ((int)(((byte)(162)))));
+            this.btnLogOut.IconChar = FontAwesome.Sharp.IconChar.DoorOpen;
+            this.btnLogOut.IconColor = System.Drawing.Color.White;
+            this.btnLogOut.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnLogOut.IconSize = 32;
+            this.btnLogOut.Location = new System.Drawing.Point(683, 0);
+            this.btnLogOut.Name = "btnLogOut";
+            this.btnLogOut.Size = new System.Drawing.Size(50, 39);
+            this.btnLogOut.TabIndex = 2;
+            this.btnLogOut.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnLogOut.UseVisualStyleBackColor = true;
+            this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
             // 
             // label90
             // 
@@ -2480,38 +2498,89 @@
             this.tabLoans.TabIndex = 5;
             this.tabLoans.Text = "LOANS";
             // 
+            // btnGoToViewLoan
+            // 
+            this.btnGoToViewLoan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(51)))), ((int)(((byte)(68)))));
+            this.btnGoToViewLoan.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnGoToViewLoan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(182)))), ((int)(((byte)(162)))));
+            this.btnGoToViewLoan.IconChar = FontAwesome.Sharp.IconChar.Eye;
+            this.btnGoToViewLoan.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(182)))), ((int)(((byte)(162)))));
+            this.btnGoToViewLoan.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnGoToViewLoan.IconSize = 20;
+            this.btnGoToViewLoan.Location = new System.Drawing.Point(42, 43);
+            this.btnGoToViewLoan.Name = "btnGoToViewLoan";
+            this.btnGoToViewLoan.Size = new System.Drawing.Size(25, 23);
+            this.btnGoToViewLoan.TabIndex = 9;
+            this.btnGoToViewLoan.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnGoToViewLoan.UseVisualStyleBackColor = false;
+            this.btnGoToViewLoan.Click += new System.EventHandler(this.btnGoToViewLoan_Click);
+            // 
+            // btnGoToRemoveLoan
+            // 
+            this.btnGoToRemoveLoan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(51)))), ((int)(((byte)(68)))));
+            this.btnGoToRemoveLoan.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnGoToRemoveLoan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(182)))), ((int)(((byte)(162)))));
+            this.btnGoToRemoveLoan.IconChar = FontAwesome.Sharp.IconChar.Minus;
+            this.btnGoToRemoveLoan.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(182)))), ((int)(((byte)(162)))));
+            this.btnGoToRemoveLoan.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnGoToRemoveLoan.IconSize = 20;
+            this.btnGoToRemoveLoan.Location = new System.Drawing.Point(73, 43);
+            this.btnGoToRemoveLoan.Name = "btnGoToRemoveLoan";
+            this.btnGoToRemoveLoan.Size = new System.Drawing.Size(25, 23);
+            this.btnGoToRemoveLoan.TabIndex = 8;
+            this.btnGoToRemoveLoan.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnGoToRemoveLoan.UseVisualStyleBackColor = false;
+            this.btnGoToRemoveLoan.Click += new System.EventHandler(this.btnGoToRemoveLoan_Click);
+            // 
+            // btnGoToAddLoan
+            // 
+            this.btnGoToAddLoan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(51)))), ((int)(((byte)(68)))));
+            this.btnGoToAddLoan.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnGoToAddLoan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(182)))), ((int)(((byte)(162)))));
+            this.btnGoToAddLoan.IconChar = FontAwesome.Sharp.IconChar.Plus;
+            this.btnGoToAddLoan.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(182)))), ((int)(((byte)(162)))));
+            this.btnGoToAddLoan.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnGoToAddLoan.IconSize = 20;
+            this.btnGoToAddLoan.Location = new System.Drawing.Point(11, 43);
+            this.btnGoToAddLoan.Name = "btnGoToAddLoan";
+            this.btnGoToAddLoan.Size = new System.Drawing.Size(25, 23);
+            this.btnGoToAddLoan.TabIndex = 7;
+            this.btnGoToAddLoan.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnGoToAddLoan.UseVisualStyleBackColor = false;
+            this.btnGoToAddLoan.Click += new System.EventHandler(this.btnGoToAddLoan_Click);
+            // 
             // ManageLoansTabControl
             // 
-            this.ManageLoansTabControl.Controls.Add(this.tabPage7);
-            this.ManageLoansTabControl.Controls.Add(this.tabPage8);
-            this.ManageLoansTabControl.Controls.Add(this.tabPage9);
+            this.ManageLoansTabControl.Controls.Add(this.tabPAgeAddLOan);
+            this.ManageLoansTabControl.Controls.Add(this.tabPAgeViewLoan);
+            this.ManageLoansTabControl.Controls.Add(this.tabPAgeRemoveLoan);
             this.ManageLoansTabControl.Location = new System.Drawing.Point(7, 72);
             this.ManageLoansTabControl.Name = "ManageLoansTabControl";
             this.ManageLoansTabControl.SelectedIndex = 0;
             this.ManageLoansTabControl.Size = new System.Drawing.Size(710, 501);
             this.ManageLoansTabControl.TabIndex = 4;
             // 
-            // tabPage7
+            // tabPAgeAddLOan
             // 
-            this.tabPage7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(51)))), ((int)(((byte)(68)))));
-            this.tabPage7.Controls.Add(this.label85);
-            this.tabPage7.Controls.Add(this.tbxLoanID);
-            this.tabPage7.Controls.Add(this.label78);
-            this.tabPage7.Controls.Add(this.btnAddLoan);
-            this.tabPage7.Controls.Add(this.label77);
-            this.tabPage7.Controls.Add(this.label76);
-            this.tabPage7.Controls.Add(this.dtpEndLoan);
-            this.tabPage7.Controls.Add(this.dtpBeginLoan);
-            this.tabPage7.Controls.Add(this.label74);
-            this.tabPage7.Controls.Add(this.label75);
-            this.tabPage7.Controls.Add(this.tbxAddLoanBookISBN);
-            this.tabPage7.Controls.Add(this.tbxAddLoanUserCF);
-            this.tabPage7.Location = new System.Drawing.Point(4, 22);
-            this.tabPage7.Name = "tabPage7";
-            this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage7.Size = new System.Drawing.Size(702, 475);
-            this.tabPage7.TabIndex = 0;
-            this.tabPage7.Text = "ADD";
+            this.tabPAgeAddLOan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(51)))), ((int)(((byte)(68)))));
+            this.tabPAgeAddLOan.Controls.Add(this.label85);
+            this.tabPAgeAddLOan.Controls.Add(this.tbxLoanID);
+            this.tabPAgeAddLOan.Controls.Add(this.label78);
+            this.tabPAgeAddLOan.Controls.Add(this.btnAddLoan);
+            this.tabPAgeAddLOan.Controls.Add(this.label77);
+            this.tabPAgeAddLOan.Controls.Add(this.label76);
+            this.tabPAgeAddLOan.Controls.Add(this.dtpEndLoan);
+            this.tabPAgeAddLOan.Controls.Add(this.dtpBeginLoan);
+            this.tabPAgeAddLOan.Controls.Add(this.label74);
+            this.tabPAgeAddLOan.Controls.Add(this.label75);
+            this.tabPAgeAddLOan.Controls.Add(this.tbxAddLoanBookISBN);
+            this.tabPAgeAddLOan.Controls.Add(this.tbxAddLoanUserCF);
+            this.tabPAgeAddLOan.Location = new System.Drawing.Point(4, 22);
+            this.tabPAgeAddLOan.Name = "tabPAgeAddLOan";
+            this.tabPAgeAddLOan.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPAgeAddLOan.Size = new System.Drawing.Size(702, 475);
+            this.tabPAgeAddLOan.TabIndex = 0;
+            this.tabPAgeAddLOan.Text = "ADD";
             // 
             // label85
             // 
@@ -2636,28 +2705,28 @@
             this.tbxAddLoanUserCF.Size = new System.Drawing.Size(184, 13);
             this.tbxAddLoanUserCF.TabIndex = 11;
             // 
-            // tabPage8
+            // tabPAgeViewLoan
             // 
-            this.tabPage8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(51)))), ((int)(((byte)(68)))));
-            this.tabPage8.Controls.Add(this.label87);
-            this.tabPage8.Controls.Add(this.tbxFilterLoanID);
-            this.tabPage8.Controls.Add(this.label83);
-            this.tabPage8.Controls.Add(this.label82);
-            this.tabPage8.Controls.Add(this.btnFilterLoans);
-            this.tabPage8.Controls.Add(this.dtpLoanFilterEndDate);
-            this.tabPage8.Controls.Add(this.dtpLoanFilterBeginDate);
-            this.tabPage8.Controls.Add(this.label81);
-            this.tabPage8.Controls.Add(this.tbxLoanFilterISBN);
-            this.tabPage8.Controls.Add(this.label80);
-            this.tabPage8.Controls.Add(this.tbxLoanFilterCF);
-            this.tabPage8.Controls.Add(this.label79);
-            this.tabPage8.Controls.Add(this.viewLoans);
-            this.tabPage8.Location = new System.Drawing.Point(4, 22);
-            this.tabPage8.Name = "tabPage8";
-            this.tabPage8.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage8.Size = new System.Drawing.Size(702, 475);
-            this.tabPage8.TabIndex = 1;
-            this.tabPage8.Text = "VIEW";
+            this.tabPAgeViewLoan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(51)))), ((int)(((byte)(68)))));
+            this.tabPAgeViewLoan.Controls.Add(this.label87);
+            this.tabPAgeViewLoan.Controls.Add(this.tbxFilterLoanID);
+            this.tabPAgeViewLoan.Controls.Add(this.label83);
+            this.tabPAgeViewLoan.Controls.Add(this.label82);
+            this.tabPAgeViewLoan.Controls.Add(this.btnFilterLoans);
+            this.tabPAgeViewLoan.Controls.Add(this.dtpLoanFilterEndDate);
+            this.tabPAgeViewLoan.Controls.Add(this.dtpLoanFilterBeginDate);
+            this.tabPAgeViewLoan.Controls.Add(this.label81);
+            this.tabPAgeViewLoan.Controls.Add(this.tbxLoanFilterISBN);
+            this.tabPAgeViewLoan.Controls.Add(this.label80);
+            this.tabPAgeViewLoan.Controls.Add(this.tbxLoanFilterCF);
+            this.tabPAgeViewLoan.Controls.Add(this.label79);
+            this.tabPAgeViewLoan.Controls.Add(this.viewLoans);
+            this.tabPAgeViewLoan.Location = new System.Drawing.Point(4, 22);
+            this.tabPAgeViewLoan.Name = "tabPAgeViewLoan";
+            this.tabPAgeViewLoan.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPAgeViewLoan.Size = new System.Drawing.Size(702, 475);
+            this.tabPAgeViewLoan.TabIndex = 1;
+            this.tabPAgeViewLoan.Text = "VIEW";
             // 
             // label87
             // 
@@ -2792,23 +2861,23 @@
             this.viewLoans.Size = new System.Drawing.Size(702, 330);
             this.viewLoans.TabIndex = 0;
             // 
-            // tabPage9
+            // tabPAgeRemoveLoan
             // 
-            this.tabPage9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(51)))), ((int)(((byte)(68)))));
-            this.tabPage9.Controls.Add(this.label89);
-            this.tabPage9.Controls.Add(this.nudRating);
-            this.tabPage9.Controls.Add(this.label88);
-            this.tabPage9.Controls.Add(this.tbxRemoveLoanBookISBN);
-            this.tabPage9.Controls.Add(this.btnRemoveLoan);
-            this.tabPage9.Controls.Add(this.label86);
-            this.tabPage9.Controls.Add(this.tbxRemoveLoanID);
-            this.tabPage9.Controls.Add(this.label84);
-            this.tabPage9.Location = new System.Drawing.Point(4, 22);
-            this.tabPage9.Name = "tabPage9";
-            this.tabPage9.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage9.Size = new System.Drawing.Size(702, 475);
-            this.tabPage9.TabIndex = 2;
-            this.tabPage9.Text = "REMOVE";
+            this.tabPAgeRemoveLoan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(51)))), ((int)(((byte)(68)))));
+            this.tabPAgeRemoveLoan.Controls.Add(this.label89);
+            this.tabPAgeRemoveLoan.Controls.Add(this.nudRating);
+            this.tabPAgeRemoveLoan.Controls.Add(this.label88);
+            this.tabPAgeRemoveLoan.Controls.Add(this.tbxRemoveLoanBookISBN);
+            this.tabPAgeRemoveLoan.Controls.Add(this.btnRemoveLoan);
+            this.tabPAgeRemoveLoan.Controls.Add(this.label86);
+            this.tabPAgeRemoveLoan.Controls.Add(this.tbxRemoveLoanID);
+            this.tabPAgeRemoveLoan.Controls.Add(this.label84);
+            this.tabPAgeRemoveLoan.Location = new System.Drawing.Point(4, 22);
+            this.tabPAgeRemoveLoan.Name = "tabPAgeRemoveLoan";
+            this.tabPAgeRemoveLoan.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPAgeRemoveLoan.Size = new System.Drawing.Size(702, 475);
+            this.tabPAgeRemoveLoan.TabIndex = 2;
+            this.tabPAgeRemoveLoan.Text = "REMOVE";
             // 
             // label89
             // 
@@ -3041,57 +3110,6 @@
             this.viewHistory.Size = new System.Drawing.Size(725, 456);
             this.viewHistory.TabIndex = 3;
             // 
-            // btnGoToViewLoan
-            // 
-            this.btnGoToViewLoan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(51)))), ((int)(((byte)(68)))));
-            this.btnGoToViewLoan.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnGoToViewLoan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(182)))), ((int)(((byte)(162)))));
-            this.btnGoToViewLoan.IconChar = FontAwesome.Sharp.IconChar.Eye;
-            this.btnGoToViewLoan.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(182)))), ((int)(((byte)(162)))));
-            this.btnGoToViewLoan.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnGoToViewLoan.IconSize = 20;
-            this.btnGoToViewLoan.Location = new System.Drawing.Point(42, 43);
-            this.btnGoToViewLoan.Name = "btnGoToViewLoan";
-            this.btnGoToViewLoan.Size = new System.Drawing.Size(25, 23);
-            this.btnGoToViewLoan.TabIndex = 9;
-            this.btnGoToViewLoan.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnGoToViewLoan.UseVisualStyleBackColor = false;
-            this.btnGoToViewLoan.Click += new System.EventHandler(this.btnGoToViewLoan_Click);
-            // 
-            // btnGoToRemoveLoan
-            // 
-            this.btnGoToRemoveLoan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(51)))), ((int)(((byte)(68)))));
-            this.btnGoToRemoveLoan.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnGoToRemoveLoan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(182)))), ((int)(((byte)(162)))));
-            this.btnGoToRemoveLoan.IconChar = FontAwesome.Sharp.IconChar.Minus;
-            this.btnGoToRemoveLoan.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(182)))), ((int)(((byte)(162)))));
-            this.btnGoToRemoveLoan.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnGoToRemoveLoan.IconSize = 20;
-            this.btnGoToRemoveLoan.Location = new System.Drawing.Point(73, 43);
-            this.btnGoToRemoveLoan.Name = "btnGoToRemoveLoan";
-            this.btnGoToRemoveLoan.Size = new System.Drawing.Size(25, 23);
-            this.btnGoToRemoveLoan.TabIndex = 8;
-            this.btnGoToRemoveLoan.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnGoToRemoveLoan.UseVisualStyleBackColor = false;
-            this.btnGoToRemoveLoan.Click += new System.EventHandler(this.btnGoToRemoveLoan_Click);
-            // 
-            // btnGoToAddLoan
-            // 
-            this.btnGoToAddLoan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(51)))), ((int)(((byte)(68)))));
-            this.btnGoToAddLoan.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnGoToAddLoan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(182)))), ((int)(((byte)(162)))));
-            this.btnGoToAddLoan.IconChar = FontAwesome.Sharp.IconChar.Plus;
-            this.btnGoToAddLoan.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(182)))), ((int)(((byte)(162)))));
-            this.btnGoToAddLoan.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnGoToAddLoan.IconSize = 20;
-            this.btnGoToAddLoan.Location = new System.Drawing.Point(11, 43);
-            this.btnGoToAddLoan.Name = "btnGoToAddLoan";
-            this.btnGoToAddLoan.Size = new System.Drawing.Size(25, 23);
-            this.btnGoToAddLoan.TabIndex = 7;
-            this.btnGoToAddLoan.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnGoToAddLoan.UseVisualStyleBackColor = false;
-            this.btnGoToAddLoan.Click += new System.EventHandler(this.btnGoToAddLoan_Click);
-            // 
             // ManchesterLibrary
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -3139,13 +3157,13 @@
             this.tabPage5.PerformLayout();
             this.tabLoans.ResumeLayout(false);
             this.ManageLoansTabControl.ResumeLayout(false);
-            this.tabPage7.ResumeLayout(false);
-            this.tabPage7.PerformLayout();
-            this.tabPage8.ResumeLayout(false);
-            this.tabPage8.PerformLayout();
+            this.tabPAgeAddLOan.ResumeLayout(false);
+            this.tabPAgeAddLOan.PerformLayout();
+            this.tabPAgeViewLoan.ResumeLayout(false);
+            this.tabPAgeViewLoan.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.viewLoans)).EndInit();
-            this.tabPage9.ResumeLayout(false);
-            this.tabPage9.PerformLayout();
+            this.tabPAgeRemoveLoan.ResumeLayout(false);
+            this.tabPAgeRemoveLoan.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudRating)).EndInit();
             this.tabDashBoard.ResumeLayout(false);
             this.tabDashBoard.PerformLayout();
@@ -3327,8 +3345,8 @@
         private System.Windows.Forms.RichTextBox rtbxModifyBookDescription;
         private System.Windows.Forms.Label label73;
         private System.Windows.Forms.TabControl ManageLoansTabControl;
-        private System.Windows.Forms.TabPage tabPage7;
-        private System.Windows.Forms.TabPage tabPage8;
+        private System.Windows.Forms.TabPage tabPAgeAddLOan;
+        private System.Windows.Forms.TabPage tabPAgeViewLoan;
         private System.Windows.Forms.Label label78;
         private System.Windows.Forms.Button btnAddLoan;
         private System.Windows.Forms.Label label77;
@@ -3350,7 +3368,7 @@
         private System.Windows.Forms.TextBox tbxLoanFilterCF;
         private System.Windows.Forms.Label label83;
         private System.Windows.Forms.Label label82;
-        private System.Windows.Forms.TabPage tabPage9;
+        private System.Windows.Forms.TabPage tabPAgeRemoveLoan;
         private System.Windows.Forms.Label label85;
         private System.Windows.Forms.TextBox tbxLoanID;
         private System.Windows.Forms.Label label84;
@@ -3393,6 +3411,7 @@
         private FontAwesome.Sharp.IconButton btnGoToViewLoan;
         private FontAwesome.Sharp.IconButton btnGoToRemoveLoan;
         private FontAwesome.Sharp.IconButton btnGoToAddLoan;
+        private FontAwesome.Sharp.IconButton btnLogOut;
     }
 }
 

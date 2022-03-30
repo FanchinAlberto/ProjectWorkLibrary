@@ -31,6 +31,7 @@ namespace ProjectWorkLibrary
         List<Borrow> ExpiredLoans = new List<Borrow>();
         public bool userTextChanged = false;
         public bool bookTextChanged = false;
+        public bool loginOK = false;
         DateTime checker = DateTime.Today;
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -160,6 +161,8 @@ namespace ProjectWorkLibrary
                 }
             }
             BindBorrows(u);
+
+            loginOK = true;
         }
         private void btnBookFilter_Click(object sender, EventArgs e) //filtro i libri in base a ciò che l'user inserisce nelle textbox
         {
@@ -787,6 +790,24 @@ namespace ProjectWorkLibrary
             viewHistory.DataSource = u.borrows;
         }
 
+        private void btnLogOut_Click(object sender, EventArgs e)
+        {
+            if (loginOK)
+            {
+                PrimaryTabControl.TabPages.Remove(tabPageUserView);
+                PrimaryTabControl.TabPages.Remove(tabViewBooks);
+                PrimaryTabControl.TabPages.Remove(tabManageUsers);
+                PrimaryTabControl.TabPages.Remove(tabManageBooks);
+                PrimaryTabControl.TabPages.Remove(tabDashBoard);
+                PrimaryTabControl.TabPages.Remove(tabLoans);
+                PrimaryTabControl.TabPages.Remove(tabHistory);
+                PrimaryTabControl.TabPages.Add(tabPageLogin);
+            }
+            else
+            {
+                MessageBox.Show("Devi prima effettuare il login");
+            }
+        }
     }
     
 }
